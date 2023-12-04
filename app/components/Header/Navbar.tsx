@@ -33,7 +33,7 @@ const links = [
     href: "/events",
   },
   {
-    label: "Contact",
+    label: "Contact Us",
     href: "/contact",
   },
 ];
