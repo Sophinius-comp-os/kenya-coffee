@@ -8,7 +8,7 @@ import Container from "../ui/Container";
 
 export default function ResponsiveCarousel() {
   return (
-    <Container className="">
+    <div className="flex flex-col justify-center items-center overflow-hidden p-6">
       <Carousel
         showArrows={true}
         autoPlay={true}
@@ -29,7 +29,7 @@ export default function ResponsiveCarousel() {
           />
         ))}
       </Carousel>
-    </Container>
+    </div>
   );
 }
 
