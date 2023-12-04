@@ -12,12 +12,12 @@ function ThemeToggler() {
       className="flex items-center focus:outline-none"
     >
       {theme === "dark" ? (
-        <div className="mr-2 text-4xl text-[#4a576E]">
+        <div className="mr-2 text-4xl text-[#000]">
           <RiSunLine />
         </div>
       ) : (
         <div className="mr-2 text-4xl text-gray-700">
-          <span className="text-[#4a576E]">
+          <span className="text-[#000]">
             <RiMoonClearLine />
           </span>
         </div>

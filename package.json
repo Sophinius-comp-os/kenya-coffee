@@ -25,6 +25,7 @@
     "react-dom": "^18",
     "react-icons": "^4.9.0",
     "react-markdown": "^8.0.7",
+    "react-responsive-carousel": "^3.2.23",
     "remark-gfm": "^3.0.1",
     "sweetalert": "^2.1.2"
   },
