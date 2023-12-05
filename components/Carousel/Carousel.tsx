@@ -3,7 +3,7 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import ImagesData from "./Items";
-import styles from "../../styles/Responsive.module.css";
+import styles from "@/app/styles/Responsive.module.css";
 import Image from "next/image";
 import Container from "../ui/Container";
 

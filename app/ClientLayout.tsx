@@ -6,7 +6,7 @@ import {
   useSelectedLayoutSegments,
 } from "next/navigation";
 import { ElementRef, forwardRef, useEffect, useState } from "react";
-import FrozenRouter from "./components/provider/FrozenRoute";
+import FrozenRouter from "../components/provider/FrozenRoute";
 
 const Child = forwardRef<
   ElementRef<typeof motion.div>,
