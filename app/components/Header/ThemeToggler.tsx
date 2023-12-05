@@ -1,6 +1,7 @@
 "use client ";
 
 import React, { useState, useEffect } from "react";
+import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { RiSunLine, RiMoonClearLine } from "react-icons/ri";
 
@@ -12,7 +13,12 @@ function ThemeToggler() {
       className="flex items-center focus:outline-none"
     >
       {theme === "dark" ? (
-        <div className="mr-2 text-4xl text-[#000]">
+        <div
+          className={clsx(
+            "mr-2 text-4xl",
+            theme === "dark" ? "text-[#FFFFFF]" : "text-[#000]"
+          )}
+        >
           <RiSunLine />
         </div>
       ) : (

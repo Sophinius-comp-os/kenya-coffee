@@ -8,10 +8,10 @@ const ImagesData = [
     imgUrl: "/images/coffee/2.jpg",
   },
 
-  {
-    id: 3,
-    imgUrl: "/images/coffee/3.jpg",
-  },
+  // {
+  //   id: 3,
+  //   imgUrl: "/images/coffee/3.jpg",
+  // },
 
   {
     id: 4,
