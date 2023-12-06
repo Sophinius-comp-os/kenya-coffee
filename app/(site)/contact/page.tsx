@@ -40,7 +40,10 @@ const Contact = () => {
     message: "",
   };
 
-  const onSubmit = async (values: any, { resetForm }) => {
+  const onSubmit = async (
+    values: any,
+    { resetForm }: { resetForm: () => void }
+  ) => {
     setMessage("Form submitted");
     setSubmitted(true);
     console.log(values);
