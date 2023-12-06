@@ -28,7 +28,7 @@ export function Post({ post }: { post: PostTypes }) {
       <div className="w-full px-4 pt-4">
         <Link
           key={post?.slug.current}
-          href={`/blog/${post?.slug.current}`}
+          href={`/news/${post?.slug.current}`}
           className="relative block w-full overflow-hidden group aspect-h-9 aspect-w-16 rounded-xl md:aspect-h-2 md:aspect-w-3"
         >
           <Image
@@ -52,7 +52,7 @@ export function Post({ post }: { post: PostTypes }) {
         </Link> */}
         <div className="flex-1">
           <h3 className="mt-4 text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900">
-            <Link key={post?.slug.current} href={`/blog/${post?.slug.current}`}>
+            <Link key={post?.slug.current} href={`/news/${post?.slug.current}`}>
               <span className="absolute inset-0"></span>
               {post.title}
             </Link>

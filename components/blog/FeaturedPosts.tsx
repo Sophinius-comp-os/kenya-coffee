@@ -1,6 +1,6 @@
 "use client";
 import { Post } from "@/typings";
-import { BlogGrid } from "@/app/blog/components/BlogGrid";
+import { BlogGrid } from "@/app/news/components/BlogGrid";
 import Container from "../ui/Container";
 
 export function FeaturedPosts({ posts }: { posts: [Post] }) {
