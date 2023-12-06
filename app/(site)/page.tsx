@@ -1,10 +1,10 @@
 import React from "react";
 
-import ResponsiveCarousel from "../components/Carousel/Carousel";
-import Container from "../components/ui/Container";
-import LatestEvents from "../components/LatestEvents/LatestEvents";
+import ResponsiveCarousel from "../../components/Carousel/Carousel";
+import Container from "../../components/ui/Container";
+import LatestEvents from "../../components/LatestEvents/LatestEvents";
 import { FeaturedPosts } from "@/components/blog/FeaturedPosts";
-import { fetchEvents, fetchPosts } from "../sanity/sanity.query";
+import { fetchEvents, fetchPosts } from "../../sanity/sanity.query";
 import { Post } from "@/typings";
 import FeaturedEvents from "@/components/event/FeaturedEvents";
 

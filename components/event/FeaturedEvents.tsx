@@ -1,6 +1,7 @@
+import SingleEvent from "@/app/(site)/events/components/SingleEvent";
 import { Post } from "@/typings";
+import events from "events";
 import React from "react";
-import SingleEvent from "../../app/events/components/SingleEvent";
 
 const FeaturedEvents = ({ events }: { events: [Post] }) => {
   console.log(events);

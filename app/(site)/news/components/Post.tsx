@@ -6,7 +6,7 @@ import {
   TutorialIcon,
   BusinessIcon,
   ContentCreationIcon,
-} from "../../../components/CategoryIcons";
+} from "../../../../components/CategoryIcons";
 import { Post as PostTypes } from "@/typings";
 import { urlForImage } from "@/sanity/lib/image";
 
