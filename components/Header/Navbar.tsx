@@ -36,6 +36,10 @@ const links = [
     label: "Contact Us",
     href: "/contact",
   },
+  {
+    label: "Login ",
+    href: "/studio",
+  },
 ];
 
 const Navbar = () => {
