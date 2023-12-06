@@ -4,11 +4,13 @@ import ResponsiveCarousel from "../components/Carousel/Carousel";
 import Container from "../components/ui/Container";
 import LatestEvents from "../components/LatestEvents/LatestEvents";
 import { FeaturedPosts } from "@/components/blog/FeaturedPosts";
-import { fetchPosts } from "../sanity/sanity.query";
+import { fetchEvents, fetchPosts } from "../sanity/sanity.query";
 import { Post } from "@/typings";
+import FeaturedEvents from "@/components/event/FeaturedEvents";
 
 const Home = async () => {
   const posts: [Post] = await fetchPosts();
+  const events: [Post] = await fetchEvents();
 
   return (
     <Container className="">
@@ -35,10 +37,8 @@ const Home = async () => {
               by the Specialty Coffee Association of Kenya.
             </p>
           </div>{" "}
+          <FeaturedEvents events={events} />
           <FeaturedPosts posts={posts} />
-          <div className="flex flex-col lg:flex-row w-full gap-4">
-            <LatestEvents />
-          </div>
         </div>
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"

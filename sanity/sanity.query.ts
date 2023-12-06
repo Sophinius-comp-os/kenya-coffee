@@ -25,3 +25,24 @@ export const fetchPosts = async () => {
 
   return posts;
 };
+
+export const fetchEvents = async () => {
+  const events = await sanityClient.fetch(
+    groq`*[_type == "event"]{
+         _id,
+          title,
+          author =>{
+            name,
+            image
+          },
+       
+        description,
+        mainImage,
+        slug,
+        publishedAt,
+  "content": body,
+        }`
+  );
+
+  return events;
+};
