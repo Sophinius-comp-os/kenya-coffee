@@ -8,6 +8,7 @@ import { fetchEvents, fetchPosts } from "../sanity/sanity.query";
 import { Post } from "@/typings";
 import FeaturedEvents from "@/components/event/FeaturedEvents";
 
+export const revalidate = 3600;
 const Home = async () => {
   const posts: [Post] = await fetchPosts();
   const events: [Post] = await fetchEvents();
