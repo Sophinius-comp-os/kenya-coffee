@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 import { sanityClient } from "./sanity.client";
 
 export const fetchPosts = async () => {
-  return sanityClient.fetch(
+  const posts = await sanityClient.fetch(
     groq`*[_type == "post"]{
          _id,
           title,
@@ -10,13 +10,18 @@ export const fetchPosts = async () => {
             name,
             image
           },
-            category =>{
-          title,
-        description
+          categories[]->{
+    _id,
+    title,
+              description
           },
         description,
         mainImage,
         slug,
+        publishedAt,
+  "content": body,
         }`
   );
+
+  return posts;
 };

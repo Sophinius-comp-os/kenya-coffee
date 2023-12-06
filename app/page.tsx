@@ -2,8 +2,8 @@ import React from "react";
 
 import ResponsiveCarousel from "../components/Carousel/Carousel";
 import Container from "../components/ui/Container";
-import LatestNews from "../components/LatestNews/LatestNews";
 import LatestEvents from "../components/LatestEvents/LatestEvents";
+import { FeaturedPosts } from "@/components/blog/FeaturedPosts";
 import { fetchPosts } from "../sanity/sanity.query";
 import { Post } from "@/typings";
 
@@ -35,7 +35,7 @@ const Home = async () => {
               by the Specialty Coffee Association of Kenya.
             </p>
           </div>{" "}
-          <LatestNews posts={posts} />
+          <FeaturedPosts posts={posts} />
           <div className="flex flex-col lg:flex-row w-full gap-4">
             <LatestEvents />
           </div>

@@ -6,6 +6,10 @@ export interface Post {
     name: string;
     image: string;
   };
+  categories: {
+    title: string;
+    description: string;
+  };
   comments: Comment[];
   description: string;
   mainImage: {
