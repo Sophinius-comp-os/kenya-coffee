@@ -1,15 +1,16 @@
-'use client'
+"use client";
 
 import {
   LinkedInIcon,
   FacebookIcon,
   TwitterIcon,
-} from '@/components/SocialIcons'
+} from "@/components/SocialIcons";
 import {
   FacebookShareButton,
   TwitterShareButton,
   LinkedinShareButton,
-} from 'next-share'
+} from "next-share";
+import React from "react";
 
 function SocialIcon({ icon: Icon, ...props }) {
   return (
@@ -19,12 +20,12 @@ function SocialIcon({ icon: Icon, ...props }) {
     >
       <Icon className="h-3.5 w-3.5 fill-slate-500 transition group-hover:fill-slate-600" />
     </span>
-  )
+  );
 }
 
 export function PostFooter() {
-  const IS_SERVER = typeof window === 'undefined'
-  const url = IS_SERVER ? '' : window.location.href
+  const IS_SERVER = typeof window === "undefined";
+  const url = IS_SERVER ? "" : window.location.href;
 
   return (
     <footer className="mx-auto max-w-2xl">
@@ -49,13 +50,13 @@ export function PostFooter() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <rect x="2.5" y="3.5" width="10" height="12"></rect>{' '}
+                <rect x="2.5" y="3.5" width="10" height="12"></rect>{" "}
                 <polyline
                   points="4.5,0.5 15.5,0.5 15.5,13.5 "
                   stroke="currentCOlor"
-                ></polyline>{' '}
-                <line x1="5.5" y1="6.5" x2="9.5" y2="6.5"></line>{' '}
-                <line x1="5.5" y1="9.5" x2="9.5" y2="9.5"></line>{' '}
+                ></polyline>{" "}
+                <line x1="5.5" y1="6.5" x2="9.5" y2="6.5"></line>{" "}
+                <line x1="5.5" y1="9.5" x2="9.5" y2="9.5"></line>{" "}
                 <line x1="5.5" y1="12.5" x2="9.5" y2="12.5"></line>
               </g>
             </svg>
@@ -73,5 +74,5 @@ export function PostFooter() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
