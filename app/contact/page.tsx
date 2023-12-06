@@ -123,9 +123,7 @@ const Contact = () => {
                       GET IN TOUCH WITH US
                     </h2>
                     <p className="text-base leading-relaxed mb-9 text-body-color">
-                      Thank you for considering a visit to our enchanting villa!
-                      We can't wait to welcome you to a world of relaxation and
-                      luxury nested in Diani Kenya.
+                      Thank you for considering a visit our website
                     </p>
                     <div className="mb-8 flex w-full max-w-[370px]">
                       <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
