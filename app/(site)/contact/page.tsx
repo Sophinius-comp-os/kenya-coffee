@@ -58,7 +58,7 @@ const Contact = () => {
       method: "post",
     });
 
-    resetForm({ values: "" });
+    resetForm();
   };
 
   return (
