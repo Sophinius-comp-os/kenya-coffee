@@ -1,99 +1,104 @@
-import Image from 'next/image'
-import clsx from 'clsx'
+import Image from "next/image";
+import clsx from "clsx";
 
-import rails from '@//images/logos/icons/rails.png'
-import javascript from '@//images/logos/icons/javascript.png'
-import html5 from '@/images/logos/icons/html5.png'
-import css from '@/images/logos/icons/css.png'
-import netlify from '@/images/logos/icons/netlify.png'
-import python from '@//images/logos/icons/python.png'
-import postgresql from '@//images/logos/icons/postgresql.png'
-import tailwind from '@//images/logos/icons/tailwindcss.png'
-import ruby from '@//images/logos/icons/ruby.png'
-import figma from '@/images/logos/icons/figma.png'
-import sketch from '@/images/logos/icons/sketch.png'
-import c from '@/images/logos/icons/c.png'
-import firebase from '@/images/logos/icons/firebase.png'
+import rails from "@//images/logos/icons/rails.png";
+import javascript from "@//images/logos/icons/javascript.png";
+import html5 from "@/images/logos/icons/html5.png";
+import css from "@/images/logos/icons/css.png";
+import netlify from "@/images/logos/icons/netlify.png";
+import python from "@//images/logos/icons/python.png";
+import postgresql from "@//images/logos/icons/postgresql.png";
+import tailwind from "@//images/logos/icons/tailwindcss.png";
+import ruby from "@//images/logos/icons/ruby.png";
+import figma from "@/images/logos/icons/figma.png";
+import sketch from "@/images/logos/icons/sketch.png";
+import c from "@/images/logos/icons/c.png";
+import firebase from "@/images/logos/icons/firebase.png";
 
 const icons = [
   {
-    name: 'Javascript',
+    name: "Javascript",
     icon: javascript,
   },
   {
-    name: 'HTML5',
+    name: "HTML5",
     icon: html5,
   },
   {
-    name: 'CSS',
+    name: "CSS",
     icon: css,
   },
   {
-    name: 'Tailwind CSS',
+    name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: 'Figma',
+    name: "Figma",
     icon: figma,
   },
   {
-    name: 'Sketch',
+    name: "Sketch",
     icon: sketch,
   },
   {
-    name: 'Rails',
+    name: "Rails",
     icon: rails,
   },
   {
-    name: 'Netlify',
+    name: "Netlify",
     icon: netlify,
   },
   {
-    name: 'Python',
+    name: "Python",
     icon: python,
   },
   {
-    name: 'Postgresql',
+    name: "Postgresql",
     icon: postgresql,
   },
   {
-    name: 'Firebase',
+    name: "Firebase",
     icon: firebase,
   },
   {
-    name: 'C programming language',
+    name: "C programming language",
     icon: c,
   },
   {
-    name: 'Ruby language',
+    name: "Ruby language",
     icon: ruby,
   },
-]
+];
 
 function getTopMargin(index) {
   if (index % 6 === 0) {
-    return 'mt-0'
+    return "mt-0";
   } else if (index % 2 === 0) {
-    return 'mt-16'
+    return "mt-16";
   } else if (index % 3 === 0) {
-    return 'mt-24'
+    return "mt-24";
   } else {
-    return 'mt-8'
+    return "mt-8";
   }
 }
 
 function StackIcon({ icon, alt, index }) {
-  const mtClass = getTopMargin(index)
+  const mtClass = getTopMargin(index);
   return (
     <div
       className={clsx(
-        'flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-slate-50/90 shadow-sm shadow-sky-100 ring-1 ring-slate-100 sm:h-[88px] sm:w-[88px]',
+        "flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-slate-50/90 shadow-sm shadow-sky-100 ring-1 ring-slate-100 sm:h-[88px] sm:w-[88px]",
         mtClass
       )}
     >
-      <Image src={icon} alt={alt} className="w-8 h-auto shrink-0 sm:w-10" sizes="(min-width: 640px) 2.5rem, 2rem" />
+      <Image
+        src={icon}
+        alt={alt}
+        className="w-8 h-auto shrink-0 sm:w-10"
+        sizes="(min-width: 640px) 2.5rem, 2rem"
+      />
     </div>
-  )
+  );
 }
 
 export function StackIconsRow() {
@@ -128,5 +133,5 @@ export function StackIconsRow() {
         />
       ))}
     </section>
-  )
+  );
 }

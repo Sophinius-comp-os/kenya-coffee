@@ -1,54 +1,54 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Container } from './Container'
+import { Container } from "./Container";
 
-import image from '@/images/portrait-02.jpg'
-import rails from '@//images/logos/icons/rails.png'
-import javascript from '@//images/logos/icons/javascript.png'
-import python from '@//images/logos/icons/python.png'
-import postgresql from '@//images/logos/icons/postgresql.png'
-import tailwind from '@//images/logos/icons/tailwindcss.png'
-import ruby from '@//images/logos/icons/ruby.png'
-import avatar1 from '@/images/avatars/avatar-1.png'
-import avatar2 from '@/images/avatars/avatar-2.png'
-import avatar3 from '@/images/avatars/avatar-3.png'
-import avatar4 from '@/images/avatars/avatar-4.png'
-import avatar5 from '@/images/avatars/avatar-5.png'
+import image from "@/images/portrait-02.jpg";
+import rails from "@//images/logos/icons/rails.png";
+import javascript from "@//images/logos/icons/javascript.png";
+import python from "@//images/logos/icons/python.png";
+import postgresql from "@//images/logos/icons/postgresql.png";
+import tailwind from "@//images/logos/icons/tailwindcss.png";
+import ruby from "@//images/logos/icons/ruby.png";
+import avatar1 from "@/images/avatars/avatar-1.png";
+import avatar2 from "@/images/avatars/avatar-2.png";
+import avatar3 from "@/images/avatars/avatar-3.png";
+import avatar4 from "@/images/avatars/avatar-4.png";
+import avatar5 from "@/images/avatars/avatar-5.png";
 
 const stack = [
   {
-    name: 'Rails',
-    experience: '7+ years of experience',
+    name: "Rails",
+    experience: "7+ years of experience",
     logo: rails,
   },
   {
-    name: 'Javascript',
-    experience: '8+ years of experience',
+    name: "Javascript",
+    experience: "8+ years of experience",
     logo: javascript,
   },
   {
-    name: 'Python',
-    experience: '4 years of experience',
+    name: "Python",
+    experience: "4 years of experience",
     logo: python,
   },
   {
-    name: 'Postgresql',
-    experience: '6 years of experience',
+    name: "Postgresql",
+    experience: "6 years of experience",
     logo: postgresql,
   },
   {
-    name: 'Tailwind',
-    experience: '3 years of experience',
+    name: "Tailwind",
+    experience: "3 years of experience",
     logo: tailwind,
   },
   {
-    name: 'Ruby',
-    experience: '9 years of experience',
+    name: "Ruby",
+    experience: "9 years of experience",
     logo: ruby,
   },
-]
+];
 
-const clientAvatars = [avatar1, avatar2, avatar3, avatar4, avatar5]
+const clientAvatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
 
 export function Stack() {
   return (
@@ -58,7 +58,7 @@ export function Stack() {
           <div className="lg:order-2">
             <div className="max-w-2xl mx-auto lg:mx-0">
               <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
-                A simple stack that you can{' '}
+                A simple stack that you can{" "}
                 <span className="relative whitespace-nowrap">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export function Stack() {
                   >
                     <mask
                       id="mask0_239_1184"
-                      style={{ maskType: 'luminance' }}
+                      style={{ maskType: "luminance" }}
                       maskUnits="userSpaceOnUse"
                       x={10}
                       y={0}
@@ -137,7 +137,7 @@ export function Stack() {
               </div>
               <div className="absolute max-w-xs p-8 -bottom-16 right-6 rounded-2xl bg-sky-700/95 backdrop-blur-sm xl:right-0 xl:bottom-10 xl:translate-x-1/4">
                 <p className="text-2xl font-medium font-display text-sky-50">
-                  <span className="text-[28px] font-bold text-white">55+</span>{' '}
+                  <span className="text-[28px] font-bold text-white">55+</span>{" "}
                   Clients have loved my work
                 </p>
                 <div className="mt-6 flex -space-x-1.5 overflow-hidden">
@@ -157,5 +157,5 @@ export function Stack() {
         </div>
       </Container>
     </section>
-  )
+  );
 }

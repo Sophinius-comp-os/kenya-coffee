@@ -18,7 +18,7 @@ const Footer = () => {
     <footer
       className={clsx(
         "overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32",
-        theme === "light" ? "!bg-[#F3F4F6]" : "!bg-[#041434]"
+        theme === "light" ? "!bg-white" : "!bg-black"
       )}
     >
       <div className="flex flex-col lg:flex-row mx-auto w-full px-4 pb-6 pt-16 sm:px-6 lg:px-8">
@@ -34,16 +34,16 @@ const Footer = () => {
                   <Image
                     src={lightLogo}
                     alt="dark mode logo"
-                    width={150}
-                    height={150}
+                    width={300}
+                    height={300}
                     className="h-18 w-auto sm:h-16  lg:h-16"
                   />
                 ) : (
                   <Image
                     src={darkLogo}
                     alt="light mode logo"
-                    width={150}
-                    height={150}
+                    width={300}
+                    height={300}
                     className="h-18 w-auto sm:h-16  lg:h-16"
                   />
                 )}

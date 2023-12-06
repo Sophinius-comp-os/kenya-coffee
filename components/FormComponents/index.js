@@ -270,7 +270,7 @@ const index = () => {
                 "w-1/2 p-3 text-black transition border rounded border-primary  hover:bg-opacity-90",
                 theme === "dark"
                   ? "bg-[#041434] text-white"
-                  : "bg-[#F3F4F6] text-black"
+                  : "bg-white text-black"
               )}
               type="submit"
               onClick={() => setShowModal(false)}

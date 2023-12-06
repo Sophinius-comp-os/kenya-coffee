@@ -47,16 +47,15 @@ html, body{
   transform-origin:top ;
 
 }
-/* :root {
+:root {
 
   --background: white;
   --foreground: black;
 }
-*/
-/* [data-theme='dark'] {
+[data-theme='dark'] {
   --background:#041434;
   --foreground: white;
-}  */
+} 
 
 
 

@@ -12,7 +12,7 @@ export function Articles({ articles, categories }) {
       id="articles"
       className={clsx(
         "overflow-hidden py-16 sm:py-24 lg:py-28",
-        theme === "light" ? "!bg-[#F3F4F6]" : "!bg-[#041434]"
+        theme === "light" ? "!bg-white" : "!bg-[#041434]"
       )}
     >
       <Container>

@@ -19,10 +19,10 @@ const links = [
     label: "Home",
     href: "/",
   },
-  {
-    label: "About",
-    href: "/about",
-  },
+  // {
+  //   label: "About",
+  //   href: "/about",
+  // },
   {
     label: "News",
     href: "/news",
@@ -156,7 +156,7 @@ const Navbar = () => {
               as="div"
               className={clsx(
                 "absolute inset-x-0 top-full z-30 mt-4 origin-top overflow-hidden rounded-2xl bg-slate-50 px-6 py-7 shadow-xl shadow-sky-100/40 ring-1 ring-slate-900/5",
-                theme === "dark" ? "bg-[#041434]" : "bg-white"
+                theme === "dark" ? "bg-dark" : "bg-white"
               )}
             >
               <div>
@@ -190,9 +190,9 @@ const Navbar = () => {
       className={clsx(
         "h-24 border-b  w-full  border-slate-200/80",
         sticky
-          ? "!fixed !z-[9999] !bg-opacity-100 shadow-sticky backdrop-blur-sm"
+          ? "!fixed !z-[9999] !bg-opacity-80 shadow-sticky backdrop-blur-sm"
           : "",
-        theme === "light" ? "!bg-white" : "!bg-[#041434]"
+        theme === "light" ? "!bg-white" : "!bg-dark]"
       )}
     >
       {/* absolute */}
@@ -208,16 +208,16 @@ const Navbar = () => {
                 <Image
                   src={lightLogo}
                   alt="dark mode logo"
-                  width={80}
-                  height={80}
+                  width={300}
+                  height={300}
                   className="h-18 w-auto sm:h-16  lg:h-16"
                 />
               ) : (
                 <Image
                   src={darkLogo}
                   alt="light mode logo"
-                  width={80}
-                  height={80}
+                  width={300}
+                  height={300}
                   className="h-18 w-auto sm:h-16  lg:h-16"
                 />
               )}
