@@ -27,6 +27,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: "eventDate",
+      title: "Event date",
+      type: "datetime",
+    }),
+    defineField({
       name: "author",
       title: "Author",
       type: "reference",

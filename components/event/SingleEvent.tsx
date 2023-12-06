@@ -1,6 +1,7 @@
 import { urlForImage } from "@/sanity/lib/image";
 import { Post } from "@/typings";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const SingleEvent = ({ event }: { event: Post }) => {
@@ -17,16 +18,14 @@ const SingleEvent = ({ event }: { event: Post }) => {
         />
 
         <div className="flex flex-col justify-between py-6 lg:mx-6">
-          <a
+          <Link
             href="#"
             className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
           >
-            How to use sticky note for problem solving
-          </a>
+            {event.title}
+          </Link>
 
-          <span className="text-sm text-gray-500 dark:text-gray-300">
-            On: 20 October 2019
-          </span>
+          <span className="text-sm text-gray-500 dark:text-gray-300"></span>
         </div>
       </div>
     </>
