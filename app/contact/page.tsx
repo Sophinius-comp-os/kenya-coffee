@@ -45,19 +45,14 @@ const Contact = () => {
     setSubmitted(true);
     console.log(values);
 
-    const { email, name, phone, subject, message } = values;
-    const res = await fetch("/api/SendMail", {
-      body: JSON.stringify({
-        email,
-        name,
-        subject,
-        phone,
-        message,
-      }),
+    // const { email, name, phone, subject, message } = values;
+
+    const res = await fetch("/api/contact", {
+      body: values,
       headers: {
         "Content-Type": "application/json",
       },
-      method: "POST",
+      method: "post",
     });
 
     resetForm({ values: "" });
