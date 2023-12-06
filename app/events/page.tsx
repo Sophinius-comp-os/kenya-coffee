@@ -1,9 +1,10 @@
-import { fetchPosts } from "@/sanity/sanity.query";
+import { fetchEvents, fetchPosts } from "@/sanity/sanity.query";
 
 import { Post as PostTypes } from "@/typings";
-import { BlogGrid } from "./components/BlogGrid";
+import { EventGrid } from "./components/EventGrid";
+import events from "events";
 
-export default async function BlogPage() {
-  const posts: [PostTypes] = await fetchPosts();
-  return <BlogGrid posts={posts} />;
+export default async function EventPage() {
+  const events: [PostTypes] = await fetchEvents();
+  return <EventGrid events={events} />;
 }
