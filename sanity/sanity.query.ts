@@ -38,6 +38,7 @@ export const fetchEvents = async () => {
        
         description,
         mainImage,
+        eventDate,
         slug,
         publishedAt,
   "content": body,
