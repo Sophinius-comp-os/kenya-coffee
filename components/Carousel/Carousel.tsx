@@ -18,7 +18,7 @@ export default function ResponsiveCarousel() {
         showThumbs={false}
         showStatus={false}
         // dynamicHeight={false}
-        className={styles.mySwiper}
+        className="w-full md:w-3/4"
       >
         {ImagesData?.map((image) => (
           <Image
