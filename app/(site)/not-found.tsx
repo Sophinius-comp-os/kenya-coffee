@@ -6,7 +6,7 @@ export default function NotFound() {
       <div className="text-center">
         <h1 className="mb-4 text-6xl font-semibold text-red-500">404</h1>
         <p className="mb-4 text-lg text-gray-600">
-          Oops! Looks like you&apos;re lost.
+          Oops! Looks like you`&apos;`re lost.
         </p>
         <div className="animate-bounce">
           <svg
