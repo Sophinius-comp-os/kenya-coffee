@@ -7,6 +7,7 @@ import React from "react";
 import clsx from "clsx";
 import darkLogo from "@/public/Web/png/Black-logo-no-background.png";
 import lightLogo from "@/public/Web/png/White-logo-no-background.png";
+import logo from '@/public/images/coffee/logos/logo.png';
 import { useTheme } from "next-themes";
 import { GoLocation } from "react-icons/go";
 import Container from "../ui/Container";
@@ -32,18 +33,18 @@ const Footer = () => {
               >
                 {theme === "dark" ? (
                   <Image
-                    src={lightLogo}
+                    src={logo}
                     alt="dark mode logo"
-                    width={300}
-                    height={300}
+                    width={1640}
+                    height={1082}
                     className="h-18 w-auto sm:h-16  lg:h-16"
                   />
                 ) : (
                   <Image
-                    src={darkLogo}
+                    src={logo}
                     alt="light mode logo"
-                    width={300}
-                    height={300}
+                    width={1640}
+                    height={1082}
                     className="h-18 w-auto sm:h-16  lg:h-16"
                   />
                 )}
