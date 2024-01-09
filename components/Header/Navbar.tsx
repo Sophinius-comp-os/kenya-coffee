@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { Menu, Popover, Transition, Disclosure } from "@headlessui/react";
 import darkLogo from "@/public/Web/png/Black-logo-no-background.png";
 import lightLogo from "@/public/Web/png/White-logo-no-background.png";
+import logo from '@/public/images/coffee/logos/logo.png';
 import ThemeToggler from "./ThemeToggler";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
@@ -31,6 +32,10 @@ const links = [
   {
     label: "Events",
     href: "/events",
+  },
+  {
+    label: "Gallery",
+    href: "/gallery",
   },
   {
     label: "Contact Us",
@@ -210,18 +215,18 @@ const Navbar = () => {
             >
               {theme === "dark" ? (
                 <Image
-                  src={lightLogo}
+                  src={logo}
                   alt="dark mode logo"
-                  width={300}
-                  height={300}
+                  width={800}
+                  height={800}
                   className="h-18 w-auto sm:h-16  lg:h-16"
                 />
               ) : (
                 <Image
-                  src={darkLogo}
+                  src={logo}
                   alt="light mode logo"
-                  width={300}
-                  height={300}
+                  width={800}
+                  height={800}
                   className="h-18 w-auto sm:h-16  lg:h-16"
                 />
               )}
