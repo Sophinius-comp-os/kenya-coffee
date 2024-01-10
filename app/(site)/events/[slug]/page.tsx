@@ -54,7 +54,7 @@ export default async function BlogPost({
         <article>
           {/* Article Header */}
           <header className="relative bg-slate-50 py-16 sm:pt-24 lg:pt-28">
-            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-white" />
+            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-light" />
             <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
               {/* <Link
                 href={`/articles/${categorySlug}#articles`}
@@ -123,7 +123,7 @@ export default async function BlogPost({
           </header>
 
           {/* Article Content */}
-          <div className="bg-white px-4 sm:px-6 lg:px-8">
+          <div className="bg-light px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg mx-auto max-w-2xl">
               {/* <MdxContent code={event.body.code} /> */}
               <PortableText

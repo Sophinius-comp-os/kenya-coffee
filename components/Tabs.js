@@ -31,7 +31,7 @@ function Tab({ tabName, directory }) {
           "inline-block rounded-full px-5 py-1.5 text-md font-medium transition",
           isActive
             ? "bg-slate-50 text-sky-800 shadow-sm shadow-sky-100/50 ring-1 ring-slate-900/5"
-            : "bg-white text-slate-700 duration-200 ease-in-out hover:bg-slate-50/95"
+            : "bg-light text-slate-700 duration-200 ease-in-out hover:bg-slate-50/95"
         )}
       >
         {tabName}

@@ -103,7 +103,7 @@ function StackIcon({ icon, alt, index }) {
 
 export function StackIconsRow() {
   return (
-    <section className="relative flex justify-center pt-16 bg-white gap-x-12 overflow-x-clip sm:gap-x-16 lg:pt-12 lg:pb-14">
+    <section className="relative flex justify-center pt-16 bg-light gap-x-12 overflow-x-clip sm:gap-x-16 lg:pt-12 lg:pb-14">
       <div className="absolute inset-y-0 left-0 w-64 h-full bg-gradient-to-r from-white/50 to-white/0" />
       <div className="absolute inset-y-0 right-0 w-64 h-full bg-gradient-to-l from-white/50 to-white/0" />
       <div className="absolute -top-2.5 right-4 flex transform gap-6 sm:right-16 lg:top-[unset] lg:right-0 lg:-bottom-12 xl:-bottom-20 2xl:right-32">

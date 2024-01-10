@@ -69,7 +69,7 @@ const Contact = () => {
         exit={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <div className={clsx(theme === "dark" ? "bg-black" : "bg-white")}>
+        <div className={clsx(theme === "dark" ? "bg-black" : "bg-light")}>
           {/* <!-- Section: Design Block --> */}
 
           <section className="relative h-screen ">
@@ -212,7 +212,7 @@ const Contact = () => {
                   >
                     {(formik) => {
                       return (
-                        <Form className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
+                        <Form className="relative p-8 bg-light rounded-lg shadow-lg sm:p-12">
                           <FormikControl
                             control="input"
                             type="name"
@@ -254,7 +254,7 @@ const Contact = () => {
                                 "w-full p-3 text-black transition border rounded border-primary  hover:bg-opacity-90",
                                 theme === "dark"
                                   ? "bg-[#041434] text-white"
-                                  : "bg-white text-black"
+                                  : "bg-light text-black"
                               )}
                               disabled={
                                 !formik.isValid &&

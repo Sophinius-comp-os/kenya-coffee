@@ -19,7 +19,7 @@ const Footer = () => {
     <footer
       className={clsx(
         "overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32",
-        theme === "light" ? "!bg-white" : "!bg-black"
+        theme === "light" ? "!bg-light" : "!bg-black"
       )}
     >
       <div className="flex flex-col lg:flex-row mx-auto w-full px-4 pb-6 pt-16 sm:px-6 lg:px-8">

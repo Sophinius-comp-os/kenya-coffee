@@ -24,7 +24,7 @@ export default async function BlogLayout({
       {/* <BlogHero /> */}
       <section
         id="articles"
-        className="overflow-hidden bg-white py-16 sm:py-14 lg:py-12"
+        className="overflow-hidden bg-light py-16 sm:py-14 lg:py-12"
       >
         <Container className="">
           {children}

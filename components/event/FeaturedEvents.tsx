@@ -6,7 +6,7 @@ import React from "react";
 const FeaturedEvents = ({ events }: { events: [Post] }) => {
   // console.log(events);
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-light dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">
         <h2 className="text-xl text-center font-bold tracking-tight text-gray-900 sm:text-3xl">
           Upcoming Events

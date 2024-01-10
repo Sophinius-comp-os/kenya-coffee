@@ -5,7 +5,7 @@ import Container from "../ui/Container";
 
 export function FeaturedPosts({ posts }: { posts: [Post] }) {
   return (
-    <section className="py-16 overflow-hidden bg-white sm:pt-24 lg:pt-28">
+    <section className="py-16 overflow-hidden bg-light sm:pt-24 lg:pt-28">
       <Container className="">
         <h2 className="max-w-2xl mx-auto text-4xl font-semibold leading-tight text-center font-display text-slate-900 sm:text-5xl sm:leading-tight">
           <span className="relative whitespace-nowrap">

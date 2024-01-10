@@ -98,7 +98,7 @@ const Navbar = () => {
         <span
           className={clsx(
             "absolute block h-0.5 rotate-0 transform rounded-full",
-            theme === "dark" ? "bg-white" : "bg-dark",
+            theme === "dark" ? "bg-light" : "bg-dark",
             "opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
             open ? "top-1.5 left-1/2 w-0" : "top-0 left-0 w-full"
           )}
@@ -106,7 +106,7 @@ const Navbar = () => {
         <span
           className={clsx(
             "absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full",
-            theme === "dark" ? "bg-white" : "bg-dark",
+            theme === "dark" ? "bg-light" : "bg-dark",
             "opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
             open ? "rotate-45" : "rotate-0"
           )}
@@ -114,7 +114,7 @@ const Navbar = () => {
         <span
           className={clsx(
             "absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full",
-            theme === "dark" ? "bg-white" : "bg-dark",
+            theme === "dark" ? "bg-light" : "bg-dark",
             "opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
             open ? "-rotate-45" : "rotate-0"
           )}
@@ -122,7 +122,7 @@ const Navbar = () => {
         <span
           className={clsx(
             "absolute block h-0.5 rotate-0 transform rounded-full",
-            theme === "dark" ? "bg-white" : "bg-dark",
+            theme === "dark" ? "bg-light" : "bg-dark",
             "opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
             open ? "top-1.5 left-1/2 w-0" : "left-0 top-3 w-full"
           )}
@@ -165,7 +165,7 @@ const Navbar = () => {
               as="div"
               className={clsx(
                 "absolute inset-x-0 top-full z-30 mt-4 origin-top overflow-hidden rounded-2xl bg-slate-50 px-6 py-7 shadow-xl shadow-sky-100/40 ring-1 ring-slate-900/5",
-                theme === "dark" ? "bg-dark" : "bg-white"
+                theme === "dark" ? "bg-dark" : "bg-light"
               )}
             >
               <div>
@@ -193,15 +193,15 @@ const Navbar = () => {
     );
   }
 
-  // sticky ? "!fixed !z-[9999] !bg-white !bg-opacity-100 shadow-sticky backdrop-blur-sm !transition dark:!bg-[#121212] dark:!bg-opacity-20":""
+  // sticky ? "!fixed !z-[9999] !bg-light !bg-opacity-100 shadow-sticky backdrop-blur-sm !transition dark:!bg-[#121212] dark:!bg-opacity-20":""
   return (
     <header
       className={clsx(
-        "h-24 border-b  w-full  border-slate-200/80",
+        "h-24 border-b  w-full  border-slate-200/80 ",
         sticky
-          ? "!fixed !z-[9999] !bg-opacity-80 shadow-sticky backdrop-blur-sm"
+          ? "!fixed !z-[9999]  shadow-sticky backdrop-blur-sm"
           : "",
-        theme === "light" ? "!bg-white" : "!bg-dark]"
+        theme === "light" ? "!bg-light" : "!bg-dark]"
       )}
     >
       {/* absolute */}

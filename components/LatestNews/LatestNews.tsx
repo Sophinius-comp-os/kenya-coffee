@@ -14,7 +14,7 @@ const LatestNews = ({ posts }: { posts: [Post] }) => {
   const router = useRouter();
   return (
     <Container className="">
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-light dark:bg-gray-900">
         <div className="container px-6 py-10 mx-auto">
           <div className="text-center">
             <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-3xl">
