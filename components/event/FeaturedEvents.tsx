@@ -4,7 +4,7 @@ import events from "events";
 import React from "react";
 
 const FeaturedEvents = ({ events }: { events: [Post] }) => {
-  console.log(events);
+  // console.log(events);
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">

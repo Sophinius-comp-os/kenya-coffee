@@ -6,7 +6,7 @@ import { format, parseISO } from "date-fns";
 import React from "react";
 
 const SingleEvent = ({ event }: { event: Post }) => {
-  console.log(event);
+  // console.log(event);
   return (
     <>
       <div className="lg:flex">

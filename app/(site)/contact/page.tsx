@@ -46,7 +46,7 @@ const Contact = () => {
   ) => {
     setMessage("Form submitted");
     setSubmitted(true);
-    console.log(values);
+    // console.log(values);
 
     // const { email, name, phone, subject, message } = values;
 

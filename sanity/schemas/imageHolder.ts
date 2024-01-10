@@ -13,23 +13,18 @@ export default defineType({
             }
         }),
 
-        defineField({
-            name: 'slug',
-            type: 'string',
-            title: 'slug',
-            validation: Rule => Rule.required(),
-        })
+
     ],
     preview: {
         select: {
             media: 'blogImage',
-            slug: 'slug',
+
         },
-        prepare ({ slug, media}) {
+        prepare ({ media}) {
             return {
                 title: media.alt,
                 media,
-                subtitle: `${slug}` || ''
+
             }
         }
     }

@@ -21,7 +21,7 @@ export function Post({ post }: { post: PostTypes }) {
   // const categorySlug = post.category.replace(/ /g, '-').toLowerCase()
   // const CategoryIcon = iconOptions[post.category]
   // console.log(post.url)
-  console.log(post.slug.current);
+  // console.log(post.slug.current);
 
   return (
     <article className="flex flex-col items-start justify-between shadow-sm rounded-2xl bg-slate-50 shadow-sky-100/50 ring-1 ring-slate-100">

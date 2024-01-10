@@ -10,7 +10,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/sanity.client";
 import { urlForImage } from "@/sanity/lib/image";
 const LatestNews = ({ posts }: { posts: [Post] }) => {
-  console.log(posts);
+  // console.log(posts);
   const router = useRouter();
   return (
     <Container className="">

@@ -22,3 +22,8 @@ export interface Post {
   };
   body: [object];
 }
+
+export interface Photo {
+  _id: string,
+
+}

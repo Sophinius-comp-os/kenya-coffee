@@ -49,7 +49,7 @@ const links = [
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
-  console.log(theme);
+  //console.log(theme);
 
   const pathname = usePathname();
 
