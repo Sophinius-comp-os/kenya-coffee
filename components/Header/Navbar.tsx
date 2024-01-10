@@ -168,7 +168,7 @@ const Navbar = () => {
                 theme === "dark" ? "bg-dark" : "bg-light"
               )}
             >
-              <div>
+              <div className='space-y-4'>
                 {/* <motion.div
                   className="flex flex-col space-y-4"
                   variants={AnimationContainer}
@@ -219,7 +219,7 @@ const Navbar = () => {
                   alt="dark mode logo"
                   width={100}
                   height={100}
-                  className="h-15 w-auto sm:h-30  lg:h-35"
+                  className="h-15 w-auto sm:h-20  lg:h-20"
                 />
               ) : (
                 <Image
@@ -227,7 +227,7 @@ const Navbar = () => {
                   alt="light mode logo"
                   width={100}
                   height={100}
-                  className="h-15 w-auto sm:h-30  lg:h-35"
+                  className="h-15 w-auto sm:h-20  lg:h-20"
                 />
               )}
             </Link>

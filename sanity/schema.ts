@@ -6,8 +6,8 @@ import post from './schemas/post'
 import author from './schemas/author'
 import event from './schemas/event'
 import gallery from './schemas/gallery'
-import blogImage from "@/sanity/schemas/objects/blogImage";
-import imageHolder from "@/sanity/schemas/imageHolder";
+import blogImage from "./schemas/objects/blogImage";
+import imageHolder from "./schemas/imageHolder";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [post, author, category, blockContent, event, blogImage,

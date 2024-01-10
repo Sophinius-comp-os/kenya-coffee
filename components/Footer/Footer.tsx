@@ -37,7 +37,7 @@ const Footer = () => {
                         alt="dark mode logo"
                         width={100}
                         height={100}
-                        className="h-15 w-auto sm:h-35  lg:h-35"
+                        className="h-15 w-auto sm:h-20  lg:h-20"
                     />
                 ) : (
                     <Image
@@ -45,7 +45,7 @@ const Footer = () => {
                         alt="light mode logo"
                         width={100}
                         height={100}
-                        className="h-15 w-auto sm:h-35  lg:h-35"
+                        className="h-15 w-auto sm:h-20  lg:h-20"
                     />
                 )}
               </Link>
@@ -69,8 +69,8 @@ const Footer = () => {
                   <ul className="mt-8 text-base md:text-lg  space-y-4">
                     <li>
                       <Link
-                        className="transition hover:text-gray-700/75"
-                        href="/"
+                          className="transition hover:text-gray-700/75"
+                          href="/"
                       >
                         Home
                       </Link>
@@ -78,8 +78,8 @@ const Footer = () => {
 
                     <li>
                       <Link
-                        className="transition hover:text-gray-700/75"
-                        href="/about"
+                          className="transition hover:text-gray-700/75"
+                          href="/about"
                       >
                         About
                       </Link>
@@ -87,8 +87,8 @@ const Footer = () => {
 
                     <li>
                       <Link
-                        className="transition hover:text-gray-700/75"
-                        href="/news"
+                          className="transition hover:text-gray-700/75"
+                          href="/news"
                       >
                         News
                       </Link>
@@ -96,8 +96,8 @@ const Footer = () => {
 
                     <li>
                       <Link
-                        className="transition hover:text-gray-700/75"
-                        href="/events"
+                          className="transition hover:text-gray-700/75"
+                          href="/events"
                       >
                         Events
                       </Link>
@@ -105,8 +105,17 @@ const Footer = () => {
 
                     <li>
                       <Link
-                        className="transition hover:text-gray-700/75"
-                        href="/contact"
+                          className="transition hover:text-gray-700/75"
+                          href="/gallery"
+                      >
+                        Gallery
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                          className="transition hover:text-gray-700/75"
+                          href="/contact"
                       >
                         Contact Us
                       </Link>

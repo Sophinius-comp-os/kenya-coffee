@@ -8,7 +8,7 @@ import addBlurredDataUrls from "@/lib/getBase64";
 import ImageContainer from "@/app/(site)/gallery/components/ImageCompnent";
 
 
-
+export const revalidate = 3600;
 const Gallery = async() => {
     // const { theme } = useTheme();
 
