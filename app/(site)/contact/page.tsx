@@ -88,15 +88,15 @@ const Contact = () => {
               <div
                 className={clsx(
                   "px-6 text-center  md:px-12",
-                  theme === "dark" ? "text-white" : "text-white"
+                  theme === "dark" ? "text-white" : "text-dark"
                 )}
               >
-                <h2 className="mt-2 mb-16  text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
+                <h2 className="mt-2 mb-16  text-5xl font-bold !text-light tracking-tight md:text-6xl xl:text-7xl">
                   Contact us
                 </h2>
                 <button
                   type="button"
-                  className="rounded border-2 border-neutral-50 px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
+                  className="rounded border-2 border-neutral-50 px-[46px] pt-[14px] pb-[12px] !text-light text-base font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                 >
