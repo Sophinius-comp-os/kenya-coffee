@@ -51,7 +51,7 @@ const Footer = () => {
               </Link>
             </div>
 
-            <p className="mt-8 max-w-1/2 text-center text-lg leading-relaxed  sm:text-left lg:mt-0">
+            <p className="mt-8 max-w-1/2 text-center text-3xl leading-relaxed  sm:text-left lg:mt-0">
               Your Experts in Coffee Events
             </p>
           </div>

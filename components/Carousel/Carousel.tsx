@@ -9,7 +9,7 @@ import Container from "../ui/Container";
 
 export default function ResponsiveCarousel() {
   return (
-    <div className="w-screen flex flex-col justify-center items-center overflow-hidden ">
+    <div className="w-screen  flex flex-col justify-center items-center overflow-hidden ">
       <Carousel
         showArrows={true}
 
@@ -30,8 +30,9 @@ export default function ResponsiveCarousel() {
             key={image.id}
             src={image.imgUrl}
             width={1000}
-            height={1000}
+            height={3000}
             alt="slides"
+            className="group-hover:opacity-75"
           />
         ))}
       </Carousel>

@@ -8,7 +8,7 @@ const FeaturedEvents = ({ events }: { events: [Post] }) => {
   return (
     <section className="bg-light dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">
-        <h2 className="text-xl text-center font-bold tracking-tight text-gray-900 sm:text-3xl">
+        <h2 className="text-3xl text-center font-bold tracking-tight text-gray-900 sm:text-4xl">
           Upcoming Events
         </h2>
 
