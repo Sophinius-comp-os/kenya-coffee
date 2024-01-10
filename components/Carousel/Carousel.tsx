@@ -9,16 +9,21 @@ import Container from "../ui/Container";
 
 export default function ResponsiveCarousel() {
   return (
-    <div className="flex flex-col justify-center items-center overflow-hidden p-6">
+    <div className="w-screen flex flex-col justify-center items-center overflow-hidden ">
       <Carousel
         showArrows={true}
+
+
         autoPlay={true}
-        showIndicators={true}
+        showIndicators={false}
         infiniteLoop={true}
         showThumbs={false}
         showStatus={false}
+        interval={9000}
+        transitionTime={900}
+        verticalSwipe='natural'
         // dynamicHeight={false}
-        className="w-full md:w-3/4"
+        // className="w-full md:w-full"
       >
         {ImagesData?.map((image) => (
           <Image
