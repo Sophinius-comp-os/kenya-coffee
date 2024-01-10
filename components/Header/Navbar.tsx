@@ -217,17 +217,17 @@ const Navbar = () => {
                 <Image
                   src={logo}
                   alt="dark mode logo"
-                  width={300}
-                  height={300}
-                  className="h-18 w-auto sm:h-16  lg:h-16"
+                  width={100}
+                  height={100}
+                  className="h-15 w-auto sm:h-30  lg:h-35"
                 />
               ) : (
                 <Image
                   src={logo}
                   alt="light mode logo"
-                  width={300}
-                  height={300}
-                  className="h-18 w-auto sm:h-16  lg:h-16"
+                  width={100}
+                  height={100}
+                  className="h-15 w-auto sm:h-30  lg:h-35"
                 />
               )}
             </Link>
