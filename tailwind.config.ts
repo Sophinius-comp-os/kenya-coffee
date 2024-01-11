@@ -24,8 +24,8 @@ module.exports = {
       "9xl": ["8rem", { lineHeight: "1" }],
     },
     colors: {
-      dark: "#121212",
-      light: "#ffffff",
+      // dark: "#121212",
+      // light: "#ffffff",
     },
     extend: {
       // fontFamily: {

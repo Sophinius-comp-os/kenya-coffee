@@ -29,22 +29,22 @@ export default function ResponsiveCarousel() {
                             alt={`Slide ${index + 1}`}
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute left-10 top-1/2 p-4 w-full md:w-1/2 !text-white bg-opacity-80 bg-black rounded-r-md transform -translate-y-1/2">
+                        <div className="absolute left-0 top-1/2 p-4 w-full md:w-1/2 text-white bg-opacity-80 bg-black rounded-r-md transform -translate-y-1/2">
                             <div className="flex flex-col items-start">
-                                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl mb-2 font-bold">
+                                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl mb-2 font-bold text-white !important">
                                     Kenya Coffee Events
                                 </h1>
-                                <h2 className="text-3xl sm:text-4xl lg:text-4xl mb-4 font-bold">
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-4 font-bold text-white !important">
                                     A leader in organizing and holding coffee events.
                                 </h2>
                                 <div className="flex flex-wrap gap-2 justify-start items-start">
-                                <Link
-                                    href="/about"
-                                    className="block w-full sm:w-auto rounded bg-[#2ecc71] my-2 px-8 py-4 text-lg sm:px-12 sm:py-4 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500"
-                                >
-                                    Learn More
-                                </Link>
-                            </div>
+                                    <Link
+                                        href="/about"
+                                        className="block w-full sm:w-auto rounded bg-[#2ecc71] my-2 px-8 py-4 text-lg sm:px-12 sm:py-4 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500"
+                                    >
+                                        Learn More
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
