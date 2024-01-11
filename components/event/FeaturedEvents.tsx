@@ -1,9 +1,10 @@
+"use client"
 import SingleEvent from "@/app/(site)/events/components/SingleEvent";
 import { Post } from "@/typings";
 import events from "events";
 import React from "react";
 
-const FeaturedEvents = ({ events }: { events: [Post] }) => {
+export const FeaturedEvents = ({ events }: { events: [Post] }) => {
   // console.log(events);
   return (
     <section className="bg-light dark:bg-gray-900">
@@ -22,4 +23,4 @@ const FeaturedEvents = ({ events }: { events: [Post] }) => {
   );
 };
 
-export default FeaturedEvents;
+
