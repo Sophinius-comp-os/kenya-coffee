@@ -223,13 +223,13 @@ const Contact = () => {
                       return (
                         <Form
                           className={clsx(
-                            "relative p-8  rounded-lg shadow-xl sm:p-12"
-                            // theme === "dark" ? "bg-light" : "bg-light"
+                            "relative p-8  rounded-lg shadow-xl sm:p-12",
+                            theme === "dark" ? "bg-light text-dark" : "bg-light"
                           )}
                         >
                           <FormikControl
                             control="input"
-                            type="name"
+                            type="text"
                             label="Name"
                             name="name"
                           />
@@ -242,13 +242,13 @@ const Contact = () => {
 
                           <FormikControl
                             control="input"
-                            type="subject"
+                            type="text"
                             label="Subject"
                             name="subject"
                           />
                           <FormikControl
                             control="input"
-                            type="phone"
+                            type="text"
                             label="Phone Number"
                             name="phone"
                           />
