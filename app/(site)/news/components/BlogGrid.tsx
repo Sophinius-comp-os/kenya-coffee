@@ -1,10 +1,18 @@
 "use client";
 import { Post as PostTypes } from "@/typings";
 import { Post } from "./Post";
+import clsx from "clsx";
+import { useTheme } from "next-themes";
 
 export function BlogGrid({ posts }: { posts: [PostTypes] }) {
+  const { theme, setTheme } = useTheme();
   return (
-    <div className="relative grid max-w-lg gap-8 mx-auto mt-14 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-6 xl:gap-x-6 xl:gap-y-8">
+    <div
+      className={clsx(
+        "relative grid max-w-lg gap-8 mx-auto mt-14 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-6 xl:gap-x-6 xl:gap-y-8",
+        theme === "dark" ? "bg-dark" : "bg-light"
+      )}
+    >
       <div className="absolute hidden gap-6 -top-20 lg:-left-4 xl:flex 2xl:-left-24">
         <span className="inline-block text-2xl tracking-wide transform -rotate-12 font-writing text-slate-600">
           Read the latest
