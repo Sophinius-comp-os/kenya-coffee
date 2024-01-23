@@ -24,8 +24,8 @@ module.exports = {
       "9xl": ["8rem", { lineHeight: "1" }],
     },
     colors: {
-      // dark: "#121212",
-      // light: "#ffffff",
+      dark: "#121212",
+      light: "#ffffff",
     },
     extend: {
       // fontFamily: {
@@ -40,8 +40,8 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
-      gridTemplateColumns:{
-        'gallery':'repeat(auto-fit, minmax(250px, 1fr))',
+      gridTemplateColumns: {
+        gallery: "repeat(auto-fit, minmax(250px, 1fr))",
       },
       animation: {
         "spin-slow": "spin 12s linear infinite",

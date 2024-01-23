@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import Container from "../ui/Container";
-import router from "next/navigation";
+import { useRouter, useRouter } from "next/navigation";
 
 const LatestEvents = () => {
+  const router = useRouter();
   return (
     <Container className="">
       <div className="text-center">
@@ -15,7 +16,7 @@ const LatestEvents = () => {
           provide a great opportunity to learn and network with others in your
           field. Get started with Event-Ally to host or join your next event.
         </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
+        <div className="mt-14 flex items-center justify-center gap-x-6">
           <button
             className="rounded-md bg-[#f02e65] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#990e3c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             onClick={() => {

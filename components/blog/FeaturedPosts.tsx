@@ -2,10 +2,18 @@
 import { Post } from "@/typings";
 import { BlogGrid } from "@/app/(site)/news/components/BlogGrid";
 import Container from "../ui/Container";
+import clsx from "clsx";
+import { useTheme } from "next-themes";
 
 export function FeaturedPosts({ posts }: { posts: [Post] }) {
+  const { theme, setTheme } = useTheme();
   return (
-    <section className="py-16 overflow-hidden bg-light sm:pt-24 lg:pt-28">
+    <section
+      className={clsx(
+        "mt-8 md:mt-12 lg:mt-24",
+        theme === "dark" ? "bg-dark" : "bg-light"
+      )}
+    >
       <Container className="">
         <h2 className="max-w-2xl mx-auto text-4xl font-semibold leading-tight text-center font-display text-slate-900 sm:text-5xl sm:leading-tight">
           <span className="relative whitespace-nowrap">

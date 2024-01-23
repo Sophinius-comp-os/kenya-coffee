@@ -7,7 +7,7 @@ import clsx from "clsx";
 import { Menu, Popover, Transition, Disclosure } from "@headlessui/react";
 import darkLogo from "@/public/Web/png/Black-logo-no-background.png";
 import lightLogo from "@/public/Web/png/White-logo-no-background.png";
-import logo from '@/public/images/coffee/logos/logo.png';
+import logo from "@/public/images/coffee/logos/logo.png";
 import ThemeToggler from "./ThemeToggler";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
@@ -168,7 +168,7 @@ const Navbar = () => {
                 theme === "dark" ? "bg-dark" : "bg-light"
               )}
             >
-              <div className='space-y-4'>
+              <div className="space-y-4">
                 {/* <motion.div
                   className="flex flex-col space-y-4"
                   variants={AnimationContainer}
@@ -198,9 +198,7 @@ const Navbar = () => {
     <header
       className={clsx(
         "h-24 border-b  w-full  border-slate-200/80 ",
-        sticky
-          ? "!fixed !z-[9999]  shadow-sticky backdrop-blur-sm"
-          : "",
+        sticky ? "!fixed !z-[9999]  shadow-sticky backdrop-blur-sm" : "",
         theme === "light" ? "!bg-light" : "!bg-dark]"
       )}
     >
