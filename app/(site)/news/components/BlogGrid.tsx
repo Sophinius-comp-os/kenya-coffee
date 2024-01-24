@@ -5,12 +5,12 @@ import clsx from "clsx";
 import { useTheme } from "next-themes";
 
 export function BlogGrid({ posts }: { posts: [PostTypes] }) {
-  const { theme, setTheme } = useTheme();
+
   return (
     <div
       className={clsx(
         "relative grid max-w-lg gap-10 mx-auto mt-14 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-10 xl:gap-x-10 xl:gap-y-10",
-        theme === "dark" ? "bg-dark" : "bg-light"
+
       )}
     >
       <div className="absolute hidden gap-6 -top-20 lg:-left-4 xl:flex 2xl:-left-24">

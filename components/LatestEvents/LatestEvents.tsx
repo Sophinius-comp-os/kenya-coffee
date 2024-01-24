@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Container from "../ui/Container";
-import { useRouter, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const LatestEvents = () => {
   const router = useRouter();

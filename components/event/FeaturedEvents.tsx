@@ -8,12 +8,12 @@ import React from "react";
 
 export const FeaturedEvents = ({ events }: { events: [Post] }) => {
   // console.log(events);
-  const { theme, setTheme } = useTheme();
+
   return (
     <section
       className={clsx(
         "mt-8 md:mt-8 lg:mt-8",
-        theme === "dark" ? "bg-dark" : "bg-light"
+
       )}
     >
       <div className="container mt-10 px-6 py-24 mx-auto ">

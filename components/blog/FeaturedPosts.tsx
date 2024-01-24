@@ -6,12 +6,12 @@ import clsx from "clsx";
 import { useTheme } from "next-themes";
 
 export function FeaturedPosts({ posts }: { posts: [Post] }) {
-  const { theme, setTheme } = useTheme();
+
   return (
     <section
       className={clsx(
         "mt-8 md:mt-12 lg:mt-24",
-        theme === "dark" ? "bg-dark" : "bg-light"
+
       )}
     >
       <Container className="">
