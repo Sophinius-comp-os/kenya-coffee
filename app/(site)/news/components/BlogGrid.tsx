@@ -9,7 +9,7 @@ export function BlogGrid({ posts }: { posts: [PostTypes] }) {
   return (
     <div
       className={clsx(
-        "relative grid max-w-lg gap-8 mx-auto mt-14 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-6 xl:gap-x-6 xl:gap-y-8",
+        "relative grid max-w-lg gap-10 mx-auto mt-14 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-10 xl:gap-x-10 xl:gap-y-10",
         theme === "dark" ? "bg-dark" : "bg-light"
       )}
     >

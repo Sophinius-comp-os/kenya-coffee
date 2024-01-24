@@ -21,7 +21,7 @@ export const FeaturedEvents = ({ events }: { events: [Post] }) => {
           Upcoming Coffee Events
         </h2>
 
-        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 mt-8 md:mt-16 md:grid-cols-2">
           {events.map((event) => (
             <SingleEvent key={event._id} event={event} />
           ))}

@@ -1,4 +1,5 @@
 export interface Post {
+    eventDate: date | undefined;
   _id: string;
   publishedAt: string;
   title: string;
