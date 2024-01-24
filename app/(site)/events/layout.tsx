@@ -5,14 +5,13 @@ import { Pagination } from "@/components/Pagination";
 
 export const metadata = {
   title: {
-    template: "Blog - %s - Jane Doe",
-    default: "Blog",
+    template: "Events - %s - Jane Doe",
+    default: "Events",
   },
-  description:
-    "Explore a diverse range of blog posts covering web development, design, content creation, business, programming tutorials, and more.",
+  description: "CHeck out our upcomming events .",
 };
 
-export default async function BlogLayout({
+export default async function EventLayout({
   children,
 }: {
   children: React.ReactNode;
