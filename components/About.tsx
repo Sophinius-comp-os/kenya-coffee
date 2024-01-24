@@ -14,16 +14,16 @@ const About = () => {
           the support of the Kenyan government, including but not limited to the
           AFA-Coffee Directorate, coffee shops, hotels and restaurants, coffee
           roasters, the Kenya Coffee Traders Association, and Barista Training
-          schools, is responsible for coordinating Kenya's participation in both
-          national and international coffee events.
+          schools, is responsible for coordinating Kenya&apos;s participation in
+          both national and international coffee events.
         </p>
 
         <div className="mb-8">
           <h3 className="text-3xl font-bold mb-4">Committee Functions</h3>
           <ul className="list-disc pl-6">
             <li>
-              The Official National reference body for Kenya’s participation in
-              both National and International Coffee Events
+              The Official National reference body for Kenya&apos;s
+              participation in both National and International Coffee Events
             </li>
             <li>
               To identify, plan, and implement Kenya coffee events Nationally
@@ -55,12 +55,13 @@ const About = () => {
               </p>
               <p>
                 The Kenya National Barista Championship is not only a
-                celebration of Kenya's top baristas but also a platform for
+                celebration of Kenya&apos;s top baristas but also a platform for
                 coffee stakeholders to network by exhibiting their products and
-                services. The event's success is expected to have a positive
-                impact on the country's coffee industry, and its promotion of
-                sustainable and ethical coffee production practices will ensure
-                that Kenya remains a leader in the global coffee industry.
+                services. The event&apos;s success is expected to have a
+                positive impact on the country&apos;s coffee industry, and its
+                promotion of sustainable and ethical coffee production practices
+                will ensure that Kenya remains a leader in the global coffee
+                industry.
               </p>
             </li>
             {/* Add similar sections for other events */}
