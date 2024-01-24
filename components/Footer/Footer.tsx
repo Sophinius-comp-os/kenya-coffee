@@ -58,15 +58,15 @@ const Footer = () => {
 
           <div className="max-w-full ">
             <div className=" ml-auto w-full m-12 md:mt-16 grid aut-cols-max auto-rows-max grid-cols-1 gap-4 border-t border-gray-100 pt-16 lg:grid-cols-2 md:gap-2 ">
-              <div className="text-center text-base md:text-lg space-y-4  sm:text-left ">
+              <div className="text-center text-2xl md:text-3xl space-y-4  sm:text-left ">
                 <h3>Nairobi Kenya</h3>
                 <h3> Kenya</h3>
               </div>
               <div className="max-w-full   mt-8 md:mt-0 grid grid-cols-1 gap-4   lg:grid-cols-3 ">
-                <div className="text-base md:text-lg  w-full text-center sm:text-left">
+                <div className="text-2xl md:text-3xl  w-full text-center sm:text-left">
                   <h2 className="text-lg md:2xl font-semibold ">About Us</h2>
 
-                  <ul className="mt-8 text-base md:text-lg  space-y-4">
+                  <ul className="mt-8 text-2xl md:text-3xl  space-y-4">
                     <li>
                       <Link
                         className="transition hover:text-gray-700/75"
@@ -119,7 +119,7 @@ const Footer = () => {
                     Helpful Links
                   </h2>
 
-                  <ul className="mt-8 text-base md:text-lg  space-y-4">
+                  <ul className="mt-8 text-2xl md:text-3xl  space-y-4">
                     <li>
                       <Link
                         className=" transition hover:text-gray-700/75"
@@ -144,7 +144,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-16 border-t border-gray-100 pt-6 flex justify-center items-center">
-            <p className="text-center text-base md:text-lg">
+            <p className="text-center text-2xl md:text-3xl">
               Copyright &copy; 2023. All rights reserved.
             </p>
           </div>

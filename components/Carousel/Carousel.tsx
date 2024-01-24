@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function ResponsiveCarousel() {
   return (
-    <div className="relative w-full h-[calc(100vh - 4rem)] md:h-[calc(100vh - 5rem)] lg:h-screen mb-8">
+    <div className="relative w-full h-[calc(100vh - 4rem)] md:h-[calc(100vh - 5rem)] lg:h-[30rem] xl:h-[70rem] mb-4 lg:mb-8">
       <Carousel
         showArrows={true}
         autoPlay={true}
