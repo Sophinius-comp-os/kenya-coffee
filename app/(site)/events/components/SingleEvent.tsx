@@ -9,7 +9,7 @@ const SingleEvent = ({ event }: { event: Post }) => {
   // console.log(event);
   return (
     <>
-      <div className="lg:flex shadow-2xl rounded-lg p-8">
+      <div className="lg:flex  shadow-2xl rounded-lg p-8">
         <Link key={event?.slug.current} href={`/events/${event?.slug.current}`}>
           <Image
             className="object-cover w-full h-72 rounded-lg lg:w-96"

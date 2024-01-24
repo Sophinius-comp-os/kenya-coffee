@@ -2,9 +2,9 @@
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation';
 
-export function Pagination({ totalPages }: { totalPages: number }) {
+export function Pagination({ totalPosts}: { totalPosts: number }) {
 
-    console.log(totalPages)
+    console.log(totalPosts)
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const currentPage = Number(searchParams.get('page')) || 1;

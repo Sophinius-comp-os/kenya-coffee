@@ -12,7 +12,7 @@ export const FeaturedEvents = ({ events }: { events: [Post] }) => {
   return (
     <section
       className={clsx(
-        "mt-8 md:mt-16 lg:mt-8",
+        "mt-8 md:mt-8 lg:mt-8",
         theme === "dark" ? "bg-dark" : "bg-light"
       )}
     >

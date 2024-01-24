@@ -6,7 +6,7 @@ import clsx from "clsx";
 const About = () => {
   return (
     <div className="bg-gray-100 min-h-screen p-8 md:mt-28  lg:mt-96 xl:mt-10"  id="section-about">
-      <div className="w-full sm:max-w-full mx-auto bg-white sm:p-8 rounded shadow-lg text-2xl text-gray-800">
+      <div className="w-full md:max-w-full mx-auto bg-white sm:p-8 rounded shadow-lg text-2xl text-gray-800">
         <h2 className="text-4xl font-bold mb-8">Kenya Coffee Events (KCE)</h2>
         <p className="mb-6">
           The Kenya Coffee Events (KCE) is an event management organization

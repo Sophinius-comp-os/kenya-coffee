@@ -15,7 +15,7 @@ export default async function BlogPage({searchParams}:{  searchParams?: {
 
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
-  const totalPosts: [PostTypes] = await fetchPosts(query);
+  const totalPosts: [PostTypes] = await fetchPosts();
   return (
       <section
       id="articles"
@@ -26,7 +26,7 @@ export default async function BlogPage({searchParams}:{  searchParams?: {
         Latest Articles
       </h2>
       <BlogGrid posts={totalPosts}/>;
-      <Pagination totalPages={totalPosts}/>
+      {/*<Pagination totalPosts={totalPosts}/>*/}
     </Container>
   </section>)
 }
