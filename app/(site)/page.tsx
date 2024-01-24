@@ -6,6 +6,7 @@ import { FeaturedEvents } from "@/components/event/FeaturedEvents";
 import { FeaturedPosts } from "@/components/blog/FeaturedPosts";
 import { fetchEvents, fetchPosts } from "@/sanity/sanity.query";
 import { Post } from "@/typings";
+import About from "@/components/About";
 
 export const revalidate = 3600;
 
@@ -18,6 +19,7 @@ const Home = async () => {
       {/* Image overlay */}
       <ResponsiveCarousel />
 
+      <About />
       <FeaturedEvents events={events} />
 
       <FeaturedPosts posts={posts} />

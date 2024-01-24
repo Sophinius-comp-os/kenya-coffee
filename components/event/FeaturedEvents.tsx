@@ -12,13 +12,13 @@ export const FeaturedEvents = ({ events }: { events: [Post] }) => {
   return (
     <section
       className={clsx(
-        "mt-8 md:mt-12 lg:mt-24",
+        "mt-8 md:mt-16 lg:mt-8",
         theme === "dark" ? "bg-dark" : "bg-light"
       )}
     >
-      <div className="container px-6 py-10 mx-auto">
-        <h2 className="text-3xl text-center font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Upcoming Events
+      <div className="container mt-20 px-6 py-24 mx-auto">
+        <h2 className="max-w-2xl mx-auto text-4xl font-semibold leading-tight text-center font-display text-slate-900 sm:text-5xl sm:leading-tight">
+          Upcoming Coffee Events
         </h2>
 
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
