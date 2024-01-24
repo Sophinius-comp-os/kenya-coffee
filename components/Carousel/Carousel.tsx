@@ -39,7 +39,8 @@ export default function ResponsiveCarousel() {
                 </h2>
                 <div className="flex flex-wrap gap-2 justify-start items-center">
                   <Link
-                    href="/about"
+                    href="#about"
+                    scroll={false}
                     className="block w-full sm:w-auto rounded bg-[#2ecc71] my-2 px-8 py-4 text-lg sm:px-12 sm:py-4 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500"
                   >
                     Learn More

@@ -1,7 +1,8 @@
 import Footer from "@/components/Footer/Footer";
 import Container from "@/components/ui/Container";
 import { Tabs } from "@/components/Tabs";
-import { Pagination } from "@/components/Pagination";
+import {Pagination} from "@/components/Pagination";
+
 
 export const metadata = {
   title: {
