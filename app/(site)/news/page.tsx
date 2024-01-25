@@ -29,7 +29,7 @@ export default async function BlogPage({searchParams}:{  searchParams?: {
         Latest Articles
       </h2>
       <BlogGrid posts={totalPosts}/>;
-      {/*<Pagination totalPosts={totalPosts}/>*/}
+      <Pagination currentPage={parseInt(searchParams.page)} />
     </Container>
   </section>)
 }

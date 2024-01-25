@@ -2,6 +2,7 @@ import Footer from "@/components/Footer/Footer";
 import Container from "@/components/ui/Container";
 import { Tabs } from "@/components/Tabs";
 import {Pagination} from "@/components/Pagination";
+import React from "react";
 
 
 export const metadata = {
@@ -20,21 +21,8 @@ export default async function EventLayout({
   // const categories = await getAllCategories();
 
   return (
-    <>
-      {/* <BlogHero /> */}
-      <section
-        id="articles"
-        className="overflow-hidden  py-16 sm:py-14 lg:py-12"
-      >
-        <Container className="">
-          <h2 className="text-center font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
-            Latest Events
-          </h2>
-          {children}
-          <Pagination />
-        </Container>
-      </section>
-      {/* <Footer /> */}
-    </>
+      <>
+        {children}
+      </>
   );
 }

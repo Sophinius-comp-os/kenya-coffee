@@ -26,5 +26,8 @@ export interface Post {
 
 export interface Photo {
   _id: string,
+  src:string,
+alt:string,
+  blurredDataUrl:string
 
 }

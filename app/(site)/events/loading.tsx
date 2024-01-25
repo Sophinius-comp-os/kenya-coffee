@@ -10,7 +10,7 @@ import Link from "next/link";
 
 
 
-const LoadingNewsPage = async () => {
+const LoadingEventsPage = async () => {
     const events: [PostTypes] = await fetchEvents();
 
     return (
@@ -97,4 +97,4 @@ const LoadingNewsPage = async () => {
         </section>)
 }
 
-export default LoadingNewsPage
+export default LoadingEventsPage

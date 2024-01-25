@@ -50,6 +50,8 @@ const LoadingNewsPage = async () => {
 
                     {totalPosts.map((post) => (
                         <article
+                            key={post?.slug.current}
+
                             className="flex flex-col items-start justify-between shadow-sm rounded-2xl bg-slate-50 shadow-sky-100/50 ring-1 ring-slate-100">
                             <div className="w-full px-4 pt-4">
                                 <Link
