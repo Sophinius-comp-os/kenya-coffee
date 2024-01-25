@@ -1,13 +1,15 @@
 import Image from "next/image";
+import {Photo as PhotoTypes}  from "@/typings";
 
 
-const ImageContainer = ({photo})  => {
+
+const ImageContainer = ({photo}:{photo:PhotoTypes})  => {
 
     console.log(photo)
-const widthHeightRatio = photo.height / photo.width
-    const galleryHeight = Math.ceil(300 * widthHeightRatio)
-    console.log(galleryHeight)
-    const photoSpans = Math.ceil(galleryHeight / 6) + 1
+// const widthHeightRatio = photo.height / photo.width
+//     const galleryHeight = Math.ceil(300 * widthHeightRatio)
+//     console.log(galleryHeight)
+//     const photoSpans = Math.ceil(galleryHeight / 6) + 1
 
     return (
         <div className="h-64 bg-gray-200 rounded-xl relative overflow-hidden group">
