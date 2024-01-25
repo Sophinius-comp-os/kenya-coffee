@@ -198,8 +198,7 @@ const Navbar = () => {
     <header
       className={clsx(
         "h-24 border-b  w-full  border-slate-200/80 ",
-        sticky ? "!fixed !z-[9999]  shadow-sticky backdrop-blur-sm" : "",
-        theme === "light" ? "!bg-light" : "!bg-dark]"
+        sticky ? "!fixed !z-[9999]  shadow-sticky backdrop-blur-sm" : ""
       )}
     >
       {/* absolute */}

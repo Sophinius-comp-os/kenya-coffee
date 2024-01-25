@@ -1,7 +1,6 @@
-"use client";
+
 import React from "react";
-import Container from "./ui/Container";
-import clsx from "clsx";
+
 
 const About = () => {
   return (
