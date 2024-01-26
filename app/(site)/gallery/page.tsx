@@ -5,7 +5,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import {fetchImages} from "@/sanity/sanity.query";
 import addBlurredDataUrls from "@/lib/getBase64";
-import ImageContainer from "@/app/(site)/gallery/components/ImageCompnent";
+import ImageContainer from "@/app/(site)/gallery/components/ImageComponent";
 
 
 export const revalidate = 3600;
