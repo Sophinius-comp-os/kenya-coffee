@@ -35,7 +35,7 @@ const links = [
   },
   {
     label: "Gallery",
-    href: "/photos",
+    href: "/gallery",
   },
   {
     label: "Contact Us",
