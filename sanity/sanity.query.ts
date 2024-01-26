@@ -50,7 +50,7 @@ export const fetchEvents = async () => {
 
 
 
-function generateImageData({ blogImage:any }) {
+function generateImageData({ blogImage }) {
   return {
 
     //    image: `![${blogImage.alt}](${imageUrl(sanityClient)
@@ -58,7 +58,7 @@ function generateImageData({ blogImage:any }) {
         .image(blogImage)
         .height(300)
         .url()}`,
-alt:`${blogImage.alt}`
+    alt:`${blogImage.alt}`
   };
 }
 export const  fetchImages = async ()  => {
@@ -73,6 +73,6 @@ export const  fetchImages = async ()  => {
   const docs = await sanityClient.fetch(images).catch((err) => console.error(err));
   // console.log(docs)
   const preparePosts = docs.map(generateImageData);
-   // console.log(preparePosts)
+  // console.log(preparePosts)
   return preparePosts;
 }
