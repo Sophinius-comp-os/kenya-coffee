@@ -6,7 +6,7 @@ import addBlurredDataUrls from "@/lib/getBase64";
 import ImageContainer from "@/app/(site)/gallery/components/ImageCompnent";
 
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic'
 export default async function GalleryPage(){
     // const { theme } = useTheme();
 

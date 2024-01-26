@@ -147,7 +147,7 @@ export default async function BlogPost({
                   className='text-xl dark:text-[#fff]'
               />
             </div>
-            <PostFooter/>
+            {/*<PostFooter/>*/}
           </div>
         </article>
       </main>

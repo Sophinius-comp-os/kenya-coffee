@@ -146,7 +146,7 @@ export default async function BlogPost({
           </div>
         </article>
       </main>
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }
