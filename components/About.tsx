@@ -4,7 +4,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="bg-gray-100 min-h-screen p-6 md:mt-28  lg:mt-96 xl:mt-10"  id="section-about">
+    <div className="bg-gray-100 min-h-screen p-6 md:mt-28  lg:mt-72 xl:mt-4"  id="section-about">
       <div className="w-full  md:mx-auto  md:p-8 md:rounded md:shadow-lg text-2xl text-gray-800">
         <h2 className="text-xl md:text-2xl font-bold mb-8 w-full p-2 text-center">Kenya Coffee Events (KCE)</h2>
         <p className="mb-6 text-lg w-full">
