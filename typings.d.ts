@@ -52,8 +52,5 @@ export interface Event {
 }
 export interface Photo {
   _id: string,
-  src:string,
-alt:string,
-  blurredDataUrl:string
 
 }
