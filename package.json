@@ -38,6 +38,7 @@
     "react-leaflet": "^4.2.1",
     "react-loading-skeleton": "^3.3.1",
     "react-markdown": "^8.0.7",
+    "react-paginate": "^8.2.0",
     "react-portable-text": "^0.6.0",
     "react-responsive-carousel": "^3.2.23",
     "remark-gfm": "^3.0.1",

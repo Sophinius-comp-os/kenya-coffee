@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
@@ -53,8 +54,8 @@ export default async function BlogPost({
       <main>
         <article>
           {/* Article Header */}
-          <header className="relative bg-slate-50 py-16 sm:pt-24 lg:pt-28">
-            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-light" />
+          <header className="relative  py-16 sm:pt-24 lg:pt-28">
+            <div className="absolute inset-x-0 bottom-0 h-1/4" />
             <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
               {/* <Link
                 href={`/articles/${categorySlug}#articles`}
@@ -63,13 +64,13 @@ export default async function BlogPost({
                 <CategoryIcon className="h-[18px] w-[18px] text-sky-700/90 transition duration-200 group-hover:text-sky-600 sm:h-5 sm:w-5" />
                 {post.category}
               </Link> */}
-              <h1 className="mt-6 text-center font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
+              <h1 className="mt-6 text-center font-display text-4xl font-semibold leading-tight  sm:text-5xl sm:leading-tight">
                 {post?.title}
               </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-center text-2xl leading-8 text-slate-700">
+              <p className="mx-auto mt-6 max-w-2xl text-center text-2xl leading-8 ">
                 {post?.description}
               </p>
-              <div className="mt-8 flex items-center justify-center gap-4 text-md text-slate-500">
+              <div className="mt-8 flex items-center justify-center gap-4 text-md ">
                 <span className="flex items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +78,7 @@ export default async function BlogPost({
                     viewBox="0 0 24 24"
                     strokeWidth="1.75"
                     stroke="currentColor"
-                    className="h-8 w-8 text-slate-400"
+                    className="h-8 w-8 "
                   >
                     <path
                       strokeLinecap="round"
@@ -96,7 +97,7 @@ export default async function BlogPost({
                     viewBox="0 0 24 24"
                     strokeWidth="1.75"
                     stroke="currentColor"
-                    className="h-8 w-8 text-slate-400"
+                    className="h-8 w-8 "
                   >
                     <path
                       strokeLinecap="round"
@@ -123,8 +124,8 @@ export default async function BlogPost({
           </header>
 
           {/* Article Content */}
-          <div className="bg-light px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg mx-auto max-w-2xl">
+          <div className="px-4 sm:px-6 lg:px-8">
+            <div className="prose prose-lg mx-auto max-w-2xl text-slate-900">
               {/* <MdxContent code={post.body.code} /> */}
               <PortableText
                 content={post?.content}

@@ -17,6 +17,7 @@ export default async function BlogPage({searchParams}:{  searchParams?: {
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
   const totalPosts: [PostTypes] = await fetchPosts();
+  console.log(totalPosts)
 
 
   return (
@@ -28,8 +29,18 @@ export default async function BlogPage({searchParams}:{  searchParams?: {
       <h2 className="text-center font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
         Latest Articles
       </h2>
-      <BlogGrid posts={totalPosts}/>;
-      <Pagination currentPage={parseInt(searchParams.page)} />
+
+      {totalPosts?.length > 0 ? (
+          <BlogGrid
+
+             posts={totalPosts}
+
+          />
+      ) : (
+          <p>No Posts Found</p>
+      )}
+
+
     </Container>
   </section>)
 }

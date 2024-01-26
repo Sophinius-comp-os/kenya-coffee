@@ -19,8 +19,10 @@ export default async function EventPage({searchParams}:{searchParams:{page:strin
           <h2 className="text-center font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
             Latest Events
           </h2>
+
+
           <EventGrid events={events} />
-          <Pagination currentPage={parseInt(searchParams.page)} />
+          {/*<Pagination currentPage={parseInt(searchParams.page)} />*/}
         </Container>
       </section>
 

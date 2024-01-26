@@ -3,6 +3,7 @@ import { Post as PostTypes } from "@/typings";
 import { Post } from "./Post";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
+import {Pagination} from "@/components/Pagination";
 
 export function BlogGrid({ posts }: { posts: [PostTypes] }) {
 
@@ -36,6 +37,7 @@ export function BlogGrid({ posts }: { posts: [PostTypes] }) {
       {posts.map((post) => (
         <Post key={post?.slug.current} post={post} />
       ))}
+      {/*<Pagination/>*/}
     </div>
   );
 }
