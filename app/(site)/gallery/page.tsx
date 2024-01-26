@@ -11,11 +11,12 @@ const Gallery = async() => {
     // const { theme } = useTheme();
 
     const images = await fetchImages()
+    console.log(images)
 
     if(!images) return <h2 className='m-4 text-2xl font-bold'>No Images Found</h2>
 
-    const photosWithBlur = await addBlurredDataUrls(images)
-    console.log(images)
+    // const photosWithBlur = await addBlurredDataUrls(images)
+
 
     return (
         <>
@@ -72,7 +73,7 @@ const Gallery = async() => {
             <main className="my-6 max-w-6xl mx-auto">
                 <section className="px-2 my-3 grid gap-12 grid-cols-gallery">
 
-                    {photosWithBlur.map((photo, index) =>
+                    {images.map((photo, index) =>
                         <ImageContainer key={index} photo={photo}/>
                     )}
 
