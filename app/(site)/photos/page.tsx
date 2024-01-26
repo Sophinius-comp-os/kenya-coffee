@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 // import {fetchImages} from "@/sanity/sanity.query";
 // import addBlurredDataUrls from "@/lib/getBase64";
-import ImageContainer from "@/app/(site)/gallery/components/ImageCompnent";
+import ImageContainer from "@/app/(site)/photos/components/ImageCompnent";
 
 
 export const revalidate = 3600;
@@ -62,7 +62,7 @@ export default async function GalleryPage(){
 
             {/* <!-- Section: Design Block --> */}
 
-            {/*<section className="px-1 gap-2 my-3 grid grid-cols-gallery auto-rows-[10px]">*/}
+            {/*<section className="px-1 gap-2 my-3 grid grid-cols-photos auto-rows-[10px]">*/}
 
 
             {/*    {photosWithBlur.map((photo, index )=> (*/}
@@ -71,7 +71,7 @@ export default async function GalleryPage(){
 
             {/*</section>*/}
             {/*<main className="my-6 max-w-6xl mx-auto">*/}
-            {/*    <section className="px-2 my-3 grid gap-12 grid-cols-gallery">*/}
+            {/*    <section className="px-2 my-3 grid gap-12 grid-cols-photos">*/}
 
             {/*        {photosWithBlur.map((photo, index) =>*/}
             {/*            <ImageContainer key={index} photo={photo}/>*/}
