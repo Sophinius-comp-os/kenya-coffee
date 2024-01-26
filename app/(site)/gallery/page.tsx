@@ -5,7 +5,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import {fetchImages} from "@/sanity/sanity.query";
 import addBlurredDataUrls from "@/lib/getBase64";
-import ImageContainer from "@/app/(site)/gallery/components/ImageComponent";
+import ImageContainer from "@/app/(site)/gallery/components/ImageCompnent";
 
 
 export const revalidate = 3600;
@@ -17,7 +17,7 @@ const Gallery = async() => {
     if(!images) return <h2 className='m-4 text-2xl font-bold'>No Images Found</h2>
 
     const photosWithBlur = await addBlurredDataUrls(images)
-    // console.log(images)
+    console.log(images)
 
     return (
         <>
