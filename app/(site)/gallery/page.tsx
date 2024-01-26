@@ -42,7 +42,7 @@ const Gallery = async() => {
                             "px-6 text-center  md:px-12",
                         )}
                     >
-                        <h2 className="mt-2 mb-16 !text-light text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
+                        <h2 className="mt-2 mb-16 !text-light text-xl md:text-4xl  font-bold tracking-tight ">
                             Gallery
                         </h2>
                         <button

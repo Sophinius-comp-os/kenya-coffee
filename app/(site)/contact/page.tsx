@@ -95,7 +95,7 @@ const Contact = () => {
                   theme === "dark" ? "text-white" : "text-dark"
                 )}
               >
-                <h2 className="mt-2 mb-16  text-5xl font-bold !text-light tracking-tight md:text-6xl xl:text-7xl">
+                <h2 className="mt-2 mb-16  text-xl md:text-4xl  font-bold !text-light tracking-tight ">
                   Contact us
                 </h2>
                 <button
@@ -123,7 +123,7 @@ const Contact = () => {
                   <div className="mb-12 max-w-[570px] lg:mb-0">
                     <h2
                       className={clsx(
-                        "mb-6 text-[32px] font-bold uppercase text-white sm:text-[40px] lg:text-[36px] xl:text-[40px]"
+                        "mb-6 text-xl md:text-2xl  font-bold uppercase text-white "
                         // theme === "dark" ? " text-white" : " text-[#041434]"
                       )}
                     >
@@ -147,7 +147,7 @@ const Contact = () => {
                       <div className="w-full">
                         <h4
                           className={clsx(
-                            "mb-1 text-2xl font-bold"
+                            "mb-1 text-lg md:text-xl  font-bold"
                             // theme === "dark" ? " text-white" : " text-[#041434]"
                           )}
                         >
@@ -174,7 +174,7 @@ const Contact = () => {
                       <div className="w-full">
                         <h4
                           className={clsx(
-                            "mb-1 text-2xl font-bold"
+                            "mb-1 text-lg md:text-xl font-bold"
                             // theme === "dark" ? " text-white" : " text-[#041434]"
                           )}
                         >
@@ -199,7 +199,7 @@ const Contact = () => {
                       <div className="w-full">
                         <h4
                           className={clsx(
-                            "mb-1 text-2xl font-bold"
+                            "mb-1 text-lg md:text-xl font-bold"
                             // theme === "dark" ? " text-white" : " text-[#041434]"
                           )}
                         >
@@ -223,7 +223,7 @@ const Contact = () => {
                       return (
                         <Form
                           className={clsx(
-                            "relative p-8  rounded-lg shadow-xl sm:p-12",
+                            "relative p-8 text-base md:text-lg  rounded-lg shadow-xl sm:p-12",
                             theme === "dark" ? "bg-light text-dark" : "bg-light"
                           )}
                         >
