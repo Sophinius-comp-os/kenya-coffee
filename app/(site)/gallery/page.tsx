@@ -1,8 +1,8 @@
 
 import clsx from "clsx";
 import Image from "next/image";
-import {fetchImages} from "@/sanity/sanity.query";
-import addBlurredDataUrls from "@/lib/getBase64";
+// import {fetchImages} from "@/sanity/sanity.query";
+// import addBlurredDataUrls from "@/lib/getBase64";
 import ImageContainer from "@/app/(site)/gallery/components/ImageCompnent";
 
 
@@ -10,12 +10,12 @@ export const revalidate = 3600;
 export default async function GalleryPage(){
     // const { theme } = useTheme();
 
-    const images = await fetchImages()
+    // const images = await fetchImages()
     // console.log(images)
     //
     // if(!images) return <h2 className='m-4 text-2xl font-bold'>No Images Found</h2>
 
-    const photosWithBlur = await addBlurredDataUrls(images)
+    // const photosWithBlur = await addBlurredDataUrls(images)
 
 
     return (
