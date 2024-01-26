@@ -50,6 +50,9 @@ export const fetchEvents = async () => {
 
 
 
+
+
+
 function generateImageData({ blogImage }) {
   return {
 
