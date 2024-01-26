@@ -12,7 +12,7 @@ const Event = ({ event }: { event: PostTypes }) => {
       <div className="w-full px-4 pt-4">
         <Link
           key={event?.slug.current}
-          href={`/news/${event?.slug.current}`}
+          href={`/events/${event?.slug.current}`}
           className="relative block w-full overflow-hidden group aspect-h-9 aspect-w-16 rounded-xl md:aspect-h-2 md:aspect-w-3"
         >
           <Image
@@ -31,7 +31,7 @@ const Event = ({ event }: { event: PostTypes }) => {
           <h3 className="mt-4 text-4xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900">
             <Link
               key={event?.slug.current}
-              href={`/news/${event?.slug.current}`}
+              href={`/events/${event?.slug.current}`}
             >
               <span className="absolute inset-0"></span>
               {event.title}

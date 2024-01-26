@@ -53,8 +53,8 @@ export default async function BlogPost({
       <main>
         <article>
           {/* Article Header */}
-          <header className="relative bg-slate-50 py-16 sm:pt-24 lg:pt-28">
-            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-light" />
+          <header className="relative  py-16 sm:pt-24 lg:pt-28">
+            <div className="absolute inset-x-0 bottom-0 h-1/4 " />
             <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
               {/* <Link
                 href={`/articles/${categorySlug}#articles`}
@@ -113,7 +113,7 @@ export default async function BlogPost({
                     src={urlForImage(event?.mainImage).url()}
                     alt={event?.title}
                     fill={true}
-                    className="w-full rounded-3xl bg-slate-100 object-cover"
+                    className="w-full rounded-3xl object-cover"
                     sizes="(min-width: 1024px) 56rem, calc(100vw - 2.5rem)"
                   />
                   <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-slate-900/10"></div>
@@ -123,13 +123,14 @@ export default async function BlogPost({
           </header>
 
           {/* Article Content */}
-          <div className="bg-light px-4 sm:px-6 lg:px-8">
+          <div className=" px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg mx-auto max-w-2xl">
               {/* <MdxContent code={event.body.code} /> */}
               <PortableText
                 content={event?.content}
                 projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                 dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+                className='text-[#888]'
               />
             </div>
             <PostFooter />
