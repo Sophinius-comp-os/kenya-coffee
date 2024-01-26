@@ -63,9 +63,9 @@ const Footer = () => {
               </div>
               <div className="max-w-full   mt-8 md:mt-0 grid  grid-cols-1 sm:grid-cols-2 gap-8   lg:grid-cols-3 ">
                 <div className="text-2xl md:text-3xl  w-full text-center sm:text-left">
-                  <h2 className="text-lg md:2xl font-semibold ">About Us</h2>
+                  <h2 className="text-xl md:text-2xl font-semibold ">About Us</h2>
 
-                  <ul className="mt-8 text-2xl md:text-3xl  space-y-4">
+                  <ul className="mt-8 text-xl md:text-3xl  space-y-4">
                     <li>
                       <Link
                         className="transition hover:text-gray-700/75"
@@ -114,11 +114,11 @@ const Footer = () => {
                 </div>
 
                 <div className="text-center sm:text-left">
-                  <h2 className="text-lg md:2xl font-semibold ">
+                  <h2 className="text-xl md:text-2xl font-semibold ">
                     Helpful Links
                   </h2>
 
-                  <ul className="mt-8 text-2xl md:text-3xl  space-y-4">
+                  <ul className="mt-8 text-xl md:text-3xl  space-y-4">
                     <li>
                       <Link
                         className=" transition hover:text-gray-700/75"
