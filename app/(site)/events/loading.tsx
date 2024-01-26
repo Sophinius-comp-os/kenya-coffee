@@ -47,8 +47,9 @@ const LoadingEventsPage = async () => {
                         </svg>
                     </div>
 
-                    {events.map((event) => (
+                    {events.map((event, index) => (
                         <article
+                            key={event?.slug.current}
                             className="flex flex-col items-start justify-between shadow-sm rounded-2xl bg-slate-50 shadow-sky-100/50 ring-1 ring-slate-100">
                             <div className="w-full px-4 pt-4">
                                 <Link
