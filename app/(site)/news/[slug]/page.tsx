@@ -125,13 +125,22 @@ export default async function BlogPost({
 
           {/* Article Content */}
           <div className="px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg mx-auto max-w-2xl text-[#fff]">
+            <div className="prose prose-lg mx-auto max-w-2xl dark:text-[#fff]">
               {/* <MdxContent code={post.body.code} /> */}
               <PortableText
                 content={post?.content}
                 projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                 dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
-                className='text-[#888]'              />
+
+                serializers={{
+                  h1: (props) => <h1 className='dark:text-[#fff]' {...props} />,
+                  h2: (props) => <h2 className='dark:text-[#fff]' {...props} />,
+                  h3: (props) => <h3 className='dark:text-[#fff]' {...props} />,
+                  h4: (props) => <h4 className='dark:text-[#fff]' {...props} />,
+                  li: ({ children }) => <li className="dark:text-[#fff]">{children}</li>,
+                  link:() => <link className='dark:text-[#fff]'></link>
+                }}
+                 />
             </div>
             {/* <PostFooter /> */}
           </div>
