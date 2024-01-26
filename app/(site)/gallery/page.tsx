@@ -7,7 +7,7 @@ import ImageContainer from "@/app/(site)/gallery/components/ImageCompnent";
 
 
 export const revalidate = 3600;
-const Gallery = async() => {
+export default async function GalleryPage(){
     // const { theme } = useTheme();
 
     const images = await fetchImages()
@@ -15,7 +15,7 @@ const Gallery = async() => {
 
     if(!images) return <h2 className='m-4 text-2xl font-bold'>No Images Found</h2>
 
-    // const photosWithBlur = await addBlurredDataUrls(images)
+    const photosWithBlur = await addBlurredDataUrls(images)
 
 
     return (
@@ -73,7 +73,7 @@ const Gallery = async() => {
             <main className="my-6 max-w-6xl mx-auto">
                 <section className="px-2 my-3 grid gap-12 grid-cols-gallery">
 
-                    {images.map((photo, index) =>
+                    {photosWithBlur.map((photo, index) =>
                         <ImageContainer key={index} photo={photo}/>
                     )}
 
@@ -84,4 +84,4 @@ const Gallery = async() => {
     );
 };
 
-export default Gallery;
+
