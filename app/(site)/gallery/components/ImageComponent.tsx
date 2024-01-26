@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ImageContainer = ({photo})  => {
 
-    console.log(photo)
+    // console.log(photo)
 const widthHeightRatio = photo.height / photo.width
     const galleryHeight = Math.ceil(300 * widthHeightRatio)
     console.log(galleryHeight)

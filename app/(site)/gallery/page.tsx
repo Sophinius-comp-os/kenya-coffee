@@ -17,7 +17,7 @@ const Gallery = async() => {
     if(!images) return <h2 className='m-4 text-2xl font-bold'>No Images Found</h2>
 
     const photosWithBlur = await addBlurredDataUrls(images)
-    console.log(images)
+    // console.log(images)
 
     return (
         <>

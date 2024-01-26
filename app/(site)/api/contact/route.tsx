@@ -113,7 +113,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ message: "Success: email was sent" });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     NextResponse.json({ message: "COULD NOT SEND MESSAGE" });
   }
 }
