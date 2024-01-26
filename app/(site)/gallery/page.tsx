@@ -70,7 +70,7 @@ const Gallery = async() => {
 
             {/*</section>*/}
             <main className="my-6 max-w-6xl mx-auto">
-                <section className="px-2 my-3 grid gap-2 grid-cols-gallery">
+                <section className="px-2 my-3 grid gap-12 grid-cols-gallery">
 
                     {photosWithBlur.map((photo, index) =>
                         <ImageContainer key={index} photo={photo}/>

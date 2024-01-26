@@ -61,7 +61,7 @@ const Footer = () => {
                 <h3>Nairobi Kenya</h3>
                 <h3> Kenya</h3>
               </div>
-              <div className="max-w-full   mt-8 md:mt-0 grid grid-cols-1 gap-4   lg:grid-cols-3 ">
+              <div className="max-w-full   mt-8 md:mt-0 grid  grid-cols-1 sm:grid-cols-2 gap-8   lg:grid-cols-3 ">
                 <div className="text-2xl md:text-3xl  w-full text-center sm:text-left">
                   <h2 className="text-lg md:2xl font-semibold ">About Us</h2>
 
@@ -142,8 +142,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-16 border-t border-gray-100 pt-6 flex justify-center items-center">
-            <p className="text-center text-2xl md:text-3xl">
+          <div className=" w-full mt-16 border-t border-gray-100 pt-6 flex justify-center items-center">
+            <p className="text-center text-xl md:text-3xl">
               Copyright &copy; 2023. All rights reserved.
             </p>
           </div>
