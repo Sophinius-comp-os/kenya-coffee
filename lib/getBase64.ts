@@ -32,8 +32,8 @@ const getBase64 = async(imageUrl:string) => {
 export default async function addBlurredDataUrls(images):Promise<[]> {
 //make all requests at once instead of awaiting each other - avoiding water fall
 
- const image = images.map((image) => image.alt)
-     console.log(image)
+    const image = images.map((image) => image.alt)
+    console.log(image)
     const base64Promises = images.map((image) => getBase64(image.src))
 
 //resolve all request in order
@@ -49,4 +49,4 @@ export default async function addBlurredDataUrls(images):Promise<[]> {
 // // Usage
 // const { base64, img } = await getImage(
 //     "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=2850&q=80"
-// );
+// );;
