@@ -51,13 +51,13 @@ export function Post({ post }: { post: PostTypes }) {
           {post.category}
         </Link> */}
         <div className="flex-1">
-          <h3 className="mt-4 text-3xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900">
+          <h3 className="mt-4  text-lg md:text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900">
             <Link key={post?.slug.current} href={`/news/${post?.slug.current}`}>
               <span className="absolute inset-0"></span>
               {post.title}
             </Link>
           </h3>
-          <p className=" text-2xl mt-3.5 line-clamp-3  leading-7 text-slate-700">
+          <p className="  text-base md:text-lg mt-3.5 line-clamp-3  leading-7 text-slate-700">
             {post.description}
           </p>
         </div>

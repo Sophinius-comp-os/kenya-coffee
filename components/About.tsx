@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div className="bg-gray-100 min-h-screen p-6 md:mt-28  lg:mt-96 xl:mt-10"  id="section-about">
       <div className="w-full  md:mx-auto  md:p-8 md:rounded md:shadow-lg text-2xl text-gray-800">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 w-full p-2 text-center">Kenya Coffee Events (KCE)</h2>
-        <p className="mb-6 w-full">
+        <h2 className="text-xl md:text-2xl font-bold mb-8 w-full p-2 text-center">Kenya Coffee Events (KCE)</h2>
+        <p className="mb-6 text-lg w-full">
           The Kenya Coffee Events (KCE) is an event management organization
           registered in Nairobi, Kenya. The Kenya Coffee Events Committee, with
           the support of the Kenyan government, including but not limited to the
@@ -18,8 +18,8 @@ const About = () => {
         </p>
 
         <div className="mb-8 w-full">
-          <h3 className="text-3xl font-bold mb-4 text-center">Committee Functions</h3>
-          <ul className="list-disc pl-6 w-full">
+          <h3 className="text-xl md:text-2xl -bold mb-4 text-center">Committee Functions</h3>
+          <ul className="list-disc text-lg pl-6 w-full">
             <li>
               The Official National reference body for Kenya&apos;s
               participation in both National and International Coffee Events
@@ -40,8 +40,8 @@ const About = () => {
         </div>
 
         <div className='w-full'>
-          <h3 className="text-3xl font-bold mb-4 text-center">Coffee Events</h3>
-          <ul className="list-disc pl-6">
+          <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">Coffee Events</h3>
+          <ul className="list-disc pl-6 text-lg">
             <li>
               <strong>Kenya National Barista Championship</strong>
               <p className="mb-4">

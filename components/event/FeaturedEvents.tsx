@@ -17,7 +17,7 @@ export const FeaturedEvents = ({ events }: { events: [Post] }) => {
       )}
     >
       <div className="container mt-10 px-6 py-24 mx-auto ">
-        <h2 className="max-w-2xl mx-auto text-4xl font-semibold leading-tight text-center font-display text-slate-900 sm:text-5xl sm:leading-tight">
+        <h2 className="max-w-2xl mx-auto text-xl md:text-3xl font-semibold leading-tight text-center font-display text-slate-900 sm:leading-tight">
           Upcoming Coffee Events
         </h2>
 

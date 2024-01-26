@@ -34,38 +34,38 @@ const Footer = () => {
                   <Image
                     src={logo}
                     alt="dark mode logo"
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                     className="h-15 w-auto sm:h-20  lg:h-20"
                   />
                 ) : (
                   <Image
                     src={logo}
                     alt="light mode logo"
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                     className="h-15 w-auto sm:h-20  lg:h-20"
                   />
                 )}
               </Link>
             </div>
 
-            <p className="mt-8 max-w-1/2 text-center text-3xl leading-relaxed  sm:text-left lg:mt-0">
+            <p className="mt-8 max-w-1/2 text-center  text-xl md:text-2xl leading-relaxed  sm:text-left lg:mt-0">
               Your Experts in Coffee Events
             </p>
           </div>
 
           <div className="max-w-full ">
             <div className=" ml-auto w-full m-12 md:mt-16 grid aut-cols-max auto-rows-max grid-cols-1 gap-4 border-t border-gray-100 pt-16 lg:grid-cols-2 md:gap-2 ">
-              <div className="text-center text-2xl md:text-3xl space-y-4  sm:text-left ">
+              <div className="text-center  text-lg md:text-xl space-y-4  sm:text-left ">
                 <h3>Nairobi Kenya</h3>
                 <h3> Kenya</h3>
               </div>
               <div className="max-w-full   mt-8 md:mt-0 grid  grid-cols-1 sm:grid-cols-2 gap-8   lg:grid-cols-3 ">
                 <div className="text-2xl md:text-3xl  w-full text-center sm:text-left">
-                  <h2 className="text-xl md:text-2xl font-semibold ">About Us</h2>
+                  <h2 className=" text-xl md:text-2xl font-semibold ">About Us</h2>
 
-                  <ul className="mt-8 text-xl md:text-3xl  space-y-4">
+                  <ul className="mt-8  text-lg md:text-xl space-y-4">
                     <li>
                       <Link
                         className="transition hover:text-gray-700/75"
@@ -114,11 +114,11 @@ const Footer = () => {
                 </div>
 
                 <div className="text-center sm:text-left">
-                  <h2 className="text-xl md:text-2xl font-semibold ">
+                  <h2 className=" text-xl md:text-2xl font-semibold ">
                     Helpful Links
                   </h2>
 
-                  <ul className="mt-8 text-xl md:text-3xl  space-y-4">
+                  <ul className="mt-8 text-lg md:text-xl  space-y-4">
                     <li>
                       <Link
                         className=" transition hover:text-gray-700/75"
@@ -143,7 +143,7 @@ const Footer = () => {
           </div>
 
           <div className=" w-full mt-16 border-t border-gray-100 pt-6 flex justify-center items-center">
-            <p className="text-center text-xl md:text-3xl">
+            <p className="text-center  text-xl md:text-2xl">
               Copyright &copy; 2023. All rights reserved.
             </p>
           </div>

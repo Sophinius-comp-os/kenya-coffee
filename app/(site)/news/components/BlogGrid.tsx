@@ -14,8 +14,8 @@ export function BlogGrid({ posts }: { posts: [PostTypes] }) {
 
       )}
     >
-      <div className="absolute hidden gap-6 -top-20 lg:-left-4 xl:flex 2xl:-left-24">
-        <span className="inline-block text-2xl tracking-wide transform -rotate-12 font-writing text-slate-600">
+      <div className="absolute hidden gap-6 -top-20   lg:-left-4 xl:flex 2xl:-left-24">
+        <span className="inline-block  text-xl md:text-2xl tracking-wide transform -rotate-12 font-writing text-slate-600">
           Read the latest
         </span>
 

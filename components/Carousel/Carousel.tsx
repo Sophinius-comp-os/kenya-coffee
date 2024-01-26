@@ -31,17 +31,17 @@ export default function ResponsiveCarousel() {
             />
             <div className="hidden md:block absolute left-0 top-1/2 p-4 w-full md:w-1/2 text-white bg-opacity-80 bg-black rounded-r-md transform -translate-y-1/2 flex items-center">
               <div>
-                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl mb-2 font-bold text-white !important">
+                <h1 className="font-display text-base sm:text-2xl lg:text-3xl mb-2 font-bold text-white !important">
                   Kenya Coffee Events
                 </h1>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-4 font-bold text-white !important">
+                <h2 className="text-lg sm:text-xl lg:text-2xl mb-4 font-bold text-white !important">
                   A leader in organizing and holding coffee events.
                 </h2>
                 <div className="flex flex-wrap gap-2 justify-start items-center">
                   <Link
                     href="#about"
                     scroll={false}
-                    className="block w-full sm:w-auto rounded bg-[#2ecc71] my-2 px-8 py-4 text-lg sm:px-12 sm:py-4 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500"
+                    className="block w-full sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-2 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500"
                   >
                     Learn More
                   </Link>

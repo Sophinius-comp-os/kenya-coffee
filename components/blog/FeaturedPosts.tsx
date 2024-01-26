@@ -15,7 +15,7 @@ export function FeaturedPosts({ posts }: { posts: [Post] }) {
       )}
     >
       <Container className="">
-        <h2 className="max-w-2xl mx-auto text-4xl font-semibold leading-tight text-center font-display text-slate-900 sm:text-5xl sm:leading-tight">
+        <h2 className="max-w-2xl mx-auto  text-xl md:text-3xl font-semibold leading-tight text-center font-display text-slate-900 l sm:leading-tight">
           <span className="relative whitespace-nowrap">
             <svg
               xmlns="http://www.w3.org/2000/svg"

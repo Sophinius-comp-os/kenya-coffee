@@ -28,7 +28,4 @@ const Home = async () => {
   );
 };
 
-
-export const dynamic = 'force-dynamic';
-export const revalidte = 0;
     export default Home;
