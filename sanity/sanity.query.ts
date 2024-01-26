@@ -50,7 +50,7 @@ export const fetchEvents = async () => {
 
 
 
-function generateImageData({ blogImage }) {
+function generateImageData({ blogImage:any }) {
   return {
 
     //    image: `![${blogImage.alt}](${imageUrl(sanityClient)

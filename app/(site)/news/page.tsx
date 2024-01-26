@@ -17,7 +17,7 @@ export default async function BlogPage({searchParams}:{  searchParams?: {
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
   const totalPosts: [PostTypes] = await fetchPosts();
-  console.log(totalPosts)
+  // console.log(totalPosts)
 
 
   return (
