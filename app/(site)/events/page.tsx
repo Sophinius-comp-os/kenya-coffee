@@ -16,7 +16,7 @@ export default async function EventPage({searchParams}:{searchParams:{page:strin
           className="overflow-hidden  py-16 sm:py-14 lg:py-12"
       >
         <Container className="">
-          <h2 className="text-center font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
+          <h2 className="text-center font-display text-xl md:text-3xl  font-semibold text-slate-900  ">
             Latest Events
           </h2>
 
