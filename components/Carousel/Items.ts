@@ -5,12 +5,12 @@ const ImagesData = [
   },
   {
     id: 2,
-    imgUrl: "/images/coffee/2.jpg",
+    imgUrl: "/images/coffee/2.png",
   },
 
   // {
   //   id: 3,
-  //   imgUrl: "/images/coffee/3.jpg",
+  //   imgUrl: "/images/coffee/3.png",
   // },
 
   {
