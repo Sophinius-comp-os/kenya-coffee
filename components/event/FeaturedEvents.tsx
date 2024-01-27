@@ -12,7 +12,7 @@ export const FeaturedEvents = ({ events }: { events: [Post] }) => {
   return (
     <section
       className={clsx(
-        "mt-8 md:mt-8 lg:mt-8",
+        "mt-6 md:mt-6 lg:mt-6",
 
       )}
     >

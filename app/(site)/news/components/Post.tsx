@@ -1,57 +1,36 @@
 import Link from "next/link";
 import Image from "next/image";
 import { format, parseISO } from "date-fns";
-import {
-  WebDevelopmentIcon,
-  TutorialIcon,
-  BusinessIcon,
-  ContentCreationIcon,
-} from "../../../../components/CategoryIcons";
+
 import { Post as PostTypes } from "@/typings";
 import { urlForImage } from "@/sanity/lib/image";
 
-const iconOptions = {
-  "Web Development": WebDevelopmentIcon,
-  Business: BusinessIcon,
-  "Content Creation": ContentCreationIcon,
-  Tutorials: TutorialIcon,
-};
-
 export function Post({ post }: { post: PostTypes }) {
-  // const categorySlug = post.category.replace(/ /g, '-').toLowerCase()
-  // const CategoryIcon = iconOptions[post.category]
-  // console.log(post.url)
-  // console.log(post.slug.current);
 
   return (
     <article className="flex flex-col items-start justify-between shadow-sm rounded-2xl shadow-sky-100/50 ring-1 ring-slate-100">
       <div className="w-full px-4 pt-4">
         <Link
-          key={post?.slug.current}
-          href={`/news/${post?.slug.current}`}
-          className="relative block w-full overflow-hidden group aspect-h-9 aspect-w-16 rounded-xl md:aspect-h-2 md:aspect-w-3"
+            key={post?.slug.current}
+            href={`/news/${post?.slug.current}`}
+            className="block w-full overflow-hidden rounded-xl"
         >
           <Image
-            src={urlForImage(post.mainImage).url()}
-            alt={post.title}
-            fill={true}
-            className="object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105"
-            sizes="(min-width: 1280px) 22.5rem, (min-width: 1024px) 33vw, (min-width: 768px) calc(50vw - 2.5rem), (min-width: 640px) 30rem, calc(100vw - 4.5rem)"
+              src={urlForImage(post.mainImage).url()}
+              alt={post.title}
+              layout="responsive"
+              width={16}
+              height={9}
+              className="object-cover w-full rounded-xl"
           />
-          <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"></div>
+          {/*<div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"></div>*/}
         </Link>
       </div>
 
-      <div className="relative flex flex-col flex-1 px-5 pt-8 pb-10 group xl:px-7">
-        {/* <Link
-          href={`/blog/categories/${categorySlug}`}
-          className="group relative z-10 flex items-center gap-2.5 text-md  text-sky-700 transition duration-200 ease-in-out hover:text-sky-600"
-        >
-          <CategoryIcon className="w-4 h-4 text-sky-600" />
-          {post.category}
-        </Link> */}
+      <div className="relative flex flex-col flex-1 px-2 pt-2 pb-4 sm:px-5 sm:pt-8 sm:pb-10 group xl:px-7">
+
         <div className="flex-1">
-          <h3 className="mt-4  text-lg md:text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900">
+          <h3 className="mt-1 sm:mt-4  text-lg md:text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900">
             <Link key={post?.slug.current} href={`/news/${post?.slug.current}`}>
               <span className="absolute inset-0"></span>
               {post.title}
@@ -81,23 +60,7 @@ export function Post({ post }: { post: PostTypes }) {
               {format(parseISO(post?.publishedAt), "LLL d, yyyy")}
             </time>
           </span>
-          <span className="flex items-center gap-1.5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.75"
-              stroke="currentColor"
-              className="w-7 h-7 text-slate-400"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            {/* {`${post.timeToRead} minute read`} */}
-          </span>
+
         </div>
       </div>
     </article>

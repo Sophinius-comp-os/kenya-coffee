@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <footer
       className={clsx(
-        "overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32"
+        "overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-14 lg:pt-16"
       )}
     >
       <div className="flex flex-col lg:flex-row mx-auto w-full px-4 pb-6 pt-16 sm:px-6 lg:px-8">
@@ -142,8 +142,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" w-full mt-16 border-t border-gray-100 pt-6 flex justify-center items-center">
-            <p className="text-center  text-xl md:text-2xl">
+          <div className=" w-full mt-8 border-t border-gray-100 pt-6 flex justify-center items-center">
+            <p className="text-center  text-lg md:text-xl">
               Copyright &copy; 2023. All rights reserved.
             </p>
           </div>
