@@ -6,6 +6,7 @@ import Provider  from "./providers";
 import Footer from "../../components/Footer/Footer";
 import classNames from "classnames";
 import {cookies} from "next/headers";
+import Template from "@/app/(site)/template";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,8 +38,9 @@ export default function RootLayout({
       <body>
         <Provider>
           <Navbar />
-
+          <Template>
           {children}
+          </Template>
           <Footer />
         </Provider>
       </body>
