@@ -7,8 +7,8 @@ const siteMetadata = {
     language: 'en-us',
     theme: 'system', // system, dark or light
     siteUrl: 'https://kenyaCoffeeEvents.com', // your website URL
-    siteLogo: '/logo.png',
-    socialBanner: '/social-banner.png', // add social banner in the public folder
+    siteLogo: '/images/coffee/logos/logo.png',
+    socialBanner: '/images/coffee/social/social-banner.png', // add social banner in the public folder
     email: 'eventskenyacoffee@gmail.com',
     github: 'https://github.com/mcwachira',
     twitter: 'https://twitter.com/CoffeeEventsKE',
