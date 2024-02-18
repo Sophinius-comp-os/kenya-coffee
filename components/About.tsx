@@ -1,9 +1,30 @@
+"use client"
 import React from "react";
-
+import { motion, useScroll, useSpring } from "framer-motion";
 const About = () => {
+
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
     return (
-        <div className="bg-gray-100  p-6 md:mt-28 lg:mt-96 xl:mt-10 2xl:min-h-screen" id="section-about">
-            <div className="w-full mx-auto p-8 rounded shadow-lg text-2xl text-gray-800">
+        <>
+            <motion.div
+                animate={{
+                    x: 0,
+                    backgroundColor: "#000",
+                    boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)",
+                    position: "fixed",
+                    transitionEnd: {
+                        display: "none",
+                    },
+                }}
+            />
+            <div className="bg-gray-100  p-6 md:mt-28 lg:mt-96 xl:h-auto xl:mt-56  xl:-mb-64  2xl:min-h-screen"
+                 id="section-about">
+                <div className="w-full mx-auto p-8 rounded shadow-lg text-2xl text-gray-800">
                 <h2 className="text-xl md:text-2xl font-bold mb-8 w-full p-2 text-center">Kenya Coffee Events (KCE)</h2>
                 <p className="mb-6 text-lg w-full">
                     The Kenya Coffee Events (KCE) is an event management organization
@@ -55,6 +76,7 @@ const About = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
