@@ -6,7 +6,7 @@ const siteMetadata = {
     description: 'A website built using Nextjs and sanity .',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'www.kenyacoffeeevents.com', // your website URL
+    siteUrl: 'https://kenyaCoffeeEvents.com', // your website URL
     siteLogo: '/logo.png',
     socialBanner: '/social-banner.png', // add social banner in the public folder
     email: 'eventskenyacoffee@gmail.com',
