@@ -1,7 +1,7 @@
 const ImagesData = [
   {
     id: 1,
-    imgUrl: "/images/coffee/1.jpg",
+    imgUrl: "/images/coffee/3.png",
   },
   {
     id: 2,

@@ -37,9 +37,7 @@ module.exports = {
         128: "32rem",
         256: "72rem",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      },
+
       gridTemplateColumns: {
         gallery: "repeat(auto-fit, minmax(250px, 1fr))",
       },
