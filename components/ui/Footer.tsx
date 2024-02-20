@@ -10,7 +10,7 @@ import lightLogo from "@/public/Web/png/White-logo-no-background.png";
 import logo from "@/public/images/coffee/logos/logo.png";
 import { useTheme } from "next-themes";
 import { GoLocation } from "react-icons/go";
-import Container from "../ui/Container";
+import Container from "./Container";
 
 const Footer = () => {
   const { theme, setTheme } = useTheme();
@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="flex justify-center text-teal-600 sm:justify-start">
               <Link
-                href="/"
+                href="/public"
                 aria-label="Home"
                 className="flex flex-shrink-0 items-center"
               >
@@ -69,7 +69,7 @@ const Footer = () => {
                     <li>
                       <Link
                         className="transition hover:text-gray-700/75"
-                        href="/"
+                        href="/public"
                       >
                         Home
                       </Link>
@@ -122,7 +122,7 @@ const Footer = () => {
                     <li>
                       <Link
                         className=" transition hover:text-gray-700/75"
-                        href="/"
+                        href="/public"
                       >
                         FAQs
                       </Link>
@@ -131,7 +131,7 @@ const Footer = () => {
                     <li>
                       <Link
                         className=" transition hover:text-gray-700/75"
-                        href="/"
+                        href="/public"
                       >
                         Support
                       </Link>

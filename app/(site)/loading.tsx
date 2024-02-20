@@ -5,7 +5,7 @@ import ImagesData from "@/components/Carousel/Items";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Skeleton from "@/components/Skeleton";
+import Skeleton from "@/components/ui/Skeleton";
 import ResponsiveCarousel from "@/components/Carousel/Carousel";
 import About from "@/components/About";
 import Container from "@/components/ui/Container";

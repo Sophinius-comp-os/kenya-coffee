@@ -12,18 +12,15 @@ import ThemeToggler from "./ThemeToggler";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
-import Container from "../ui/Container";
-import { AnimationContainer, Item } from "../ui/Animate";
+import Container from "../Container";
+import { AnimationContainer, Item } from "../Animate";
 
 const links = [
   {
     label: "Home",
     href: "/",
   },
-  // {
-  //   label: "About",
-  //   href: "/about",
-  // },
+
   {
     label: "News",
     href: "/news",
@@ -41,6 +38,10 @@ const links = [
     label: "Contact Us",
     href: "/contact",
   },
+    {
+  label: "Judges",
+  href: "/judges",
+},
   {
     label: "Login ",
     href: "/studio",
@@ -206,7 +207,7 @@ const Navbar = () => {
         <nav className="relative z-50 flex w-full items-center justify-between">
           <div className="flex shrink-0 items-center">
             <Link
-              href="/"
+              href="/public"
               aria-label="Home"
               className="flex flex-shrink-0 items-center"
             >

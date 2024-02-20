@@ -1,8 +1,8 @@
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/ui/Footer";
 import Container from "@/components/ui/Container";
 // import { Tabs } from "@/components/Tabs";
 // import { getAllCategories } from "@/lib/articles";
-import {Pagination} from "@/components/Pagination";
+import {Pagination} from "@/components/ui/Pagination";
 import React from "react";
 
 export const metadata = {

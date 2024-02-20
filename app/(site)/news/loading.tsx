@@ -2,7 +2,7 @@ import Container from "@/components/ui/Container";
 import {BlogGrid} from "@/app/(site)/news/components/BlogGrid";
 import React from "react";
 import {Post as PostTypes} from "@/typings";
-import Skeleton from "@/components/Skeleton";
+import Skeleton from "@/components/ui/Skeleton";
 import {fetchPosts} from "@/sanity/sanity.query";
 import clsx from "clsx";
 import {Post} from "@/app/(site)/news/components/Post";

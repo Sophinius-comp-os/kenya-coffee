@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import Navbar from "../../components/Header/Navbar";
+import Navbar from "@/components/ui/Header/Navbar";
 import Provider  from "./providers";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/ui/Footer";
 import classNames from "classnames";
 import {cookies} from "next/headers";
 import Template from "@/app/(site)/template";

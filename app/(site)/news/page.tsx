@@ -4,7 +4,7 @@ import { Post as PostTypes } from "@/typings";
 import { BlogGrid } from "./components/BlogGrid";
 import Container from "@/components/ui/Container";
 import React from "react";
-import {Pagination} from "@/components/Pagination";
+import {Pagination} from "@/components/ui/Pagination";
 
 
 export const revalidate = 3600;

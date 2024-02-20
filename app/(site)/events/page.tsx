@@ -4,7 +4,7 @@ import { Post as PostTypes } from "@/typings";
 import { EventGrid } from "./components/EventGrid";
 import events from "events";
 import Container from "@/components/ui/Container";
-import {Pagination} from "@/components/Pagination";
+import {Pagination} from "@/components/ui/Pagination";
 
 export const revalidate = 3600;
 

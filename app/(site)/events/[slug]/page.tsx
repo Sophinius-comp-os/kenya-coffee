@@ -13,7 +13,7 @@ import {
   ContentCreationIcon,
 } from "@/components/CategoryIcons";
 import { urlForImage } from "@/sanity/lib/image";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/ui/Footer";
 import post from "@/sanity/schemas/post";
 
 const iconOptions = {
