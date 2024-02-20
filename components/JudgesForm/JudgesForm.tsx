@@ -42,8 +42,6 @@ const JudgesForm= ({steps}: Props) => {
         email: "",
         name: "",
         phone: "",
-        subject: "",
-        message: "",
         highestEducationLevel:"",
         currentEmployer:"",
         numberOfYearsWorked:"",

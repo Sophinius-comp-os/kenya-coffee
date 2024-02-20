@@ -11,11 +11,11 @@ import {JudgesSchema} from "@/components/JudgesForm/judgeFormSchema";
 import {Button} from "@/components/ui/Button";
 
 const educationOptions = [
-    { key: "one", value: "Primary School" },
-    { key: "two", value: "Secondary School" },
-    { key: "three", value: "Vocation Training" },
-    { key: "four", value: "Bachelor's degree" },
-    { key: "five", value: "Master's degree" },
+    { key: "Primary School", value: "Primary School" },
+    { key: "Secondary School", value: "Secondary School" },
+    { key: "Vocation Training", value: "Vocation Training" },
+    { key: "Bachelor's degree", value: "Bachelor's degree" },
+    { key: "Master's degree", value: "Master's degree" },
 ];
 
 const Page2: FormStepComponentType = (props) => {
@@ -25,9 +25,8 @@ const Page2: FormStepComponentType = (props) => {
         <div className="flex flex-col gap-2 w-[400px]">
             <FormikControl
                 control="select"
-                type="adults"
-                label="Adults"
-                name="adults"
+                label="Current Education Level"
+                name="highestEducationLevel"
                 options={educationOptions}
             />
             <FormikControl

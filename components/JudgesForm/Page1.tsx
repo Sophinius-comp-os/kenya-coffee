@@ -10,24 +10,10 @@ import {FormStepComponentType} from "@/components/JudgesForm/FormStepProps";
 import {JudgesSchema} from "@/components/JudgesForm/judgeFormSchema";
 import {Button} from "@/components/ui/Button";
 
-const childrenOptions = [
-    { key: "one", value: 1 },
-    { key: "two", value: 2 },
-    { key: "three", value: 3 },
-    { key: "four", value: 4 },
-    { key: "five", value: 5 },
-];
-const adultOptions = [
-    { key: "one", value: 1 },
-    { key: "two", value: 2 },
-    { key: "three", value: 3 },
-    { key: "four", value: 4 },
-    { key: "five", value: 5 },
-];
 
 const genderOptions = [
-    { key: "one", value: 'male' },
-    { key: "two", value: 'female' },
+    { key: "Male", value: 'male' },
+    { key: "Female", value: 'female' },
 
 ];
 const Page1: FormStepComponentType = (props) => {
@@ -54,10 +40,9 @@ const Page1: FormStepComponentType = (props) => {
                 name="phone"
             />
             <FormikControl
-                control="select"
-                type="adults"
-                label="Adults"
-                name="adults"
+                control="radio"
+                label="Gender"
+                name="gender"
                 options={genderOptions}
             />
             <Button  className='px-8 py-3 text-white rounded bg-green  mt-2 ' onClick={props.onNext} disabled={!!hasErrors}>
