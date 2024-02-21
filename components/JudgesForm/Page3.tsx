@@ -11,7 +11,7 @@ import {JudgesSchema} from "@/components/JudgesForm/judgeFormSchema";
 import {Button} from "@/components/ui/Button";
 
 
-const Page3: FormStepComponentType = (props) => {
+const Page3: FormStepComponentType = () => {
     const { errors } = useFormikContext<InferType<typeof JudgesSchema>>();
     const hasErrors = errors.name || errors.email;
     return (
@@ -42,18 +42,7 @@ const Page3: FormStepComponentType = (props) => {
                 name="placeOfWork"
             />
 
-            <div className="flex justify-between">
-                <Button onClick={props.onPrevious} className='px-6 py-2.5  text-lg shadow-lg text-white rounded bg-green-500 mt-2 flex-grow ' >
-                    Back
-                </Button>
-                <Button
-                    className='px-6 py-2.5  text-lg shadow-xl text-white rounded bg-red-500  mt-2 flex-grow'
-                    onClick={props.onNext}
 
-                >
-                    Next
-                </Button>
-            </div>
         </div>
     );
 };

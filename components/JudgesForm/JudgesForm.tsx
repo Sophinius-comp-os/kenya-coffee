@@ -13,6 +13,10 @@ import Container from "@/components/ui/Container";
 import FormikControl from "@/components/FormComponents/FormikControl";
 import Image from "next/image";
 import {JudgesSchema} from "@/components/JudgesForm/judgeFormSchema";
+import Page1 from "@/components/JudgesForm/Page1";
+import Page2 from "@/components/JudgesForm/Page2";
+import Page3 from "@/components/JudgesForm/Page3";
+import Page4 from "@/components/JudgesForm/Page4";
 
 
 
@@ -21,15 +25,17 @@ type Props = {
     steps:FormStepComponentType[];
 }
 
-const JudgesForm= ({steps}: Props) => {
+const JudgesForm= ({ onClose }) => {
 
-    const router = useRouter();
-    const searchParams = useSearchParams();
-    const page = searchParams.get("step"); // get the current step using search params
-    const pageIndex = page ? +page : 1;
-    // get the step component
-    const StepComponent = steps.at(pageIndex - 1);
-    const stepExists = !!StepComponent;
+    const [step, setStep] = useState(1);
+
+    const nextStep = () => {
+        setStep(step + 1);
+    };
+
+    const prevStep = () => {
+        setStep(step - 1);
+    };
 
 
     const { theme } = useTheme();
@@ -85,71 +91,85 @@ const JudgesForm= ({steps}: Props) => {
             >
                 <div className={clsx(theme === "dark" ? "bg-dark" : "bg-light")}>
                     {/* <!-- Section: Design Block --> */}
-
-                    <h2
-                        className={clsx(
-                            "center mb-6 text-xl md:text-2xl  font-bold uppercase text-white "
-                            // theme === "dark" ? " text-white" : " text-[#041434]"
-                        )}
-                    >
-                        Judges Registration form
-                    </h2>
-                    <section>
-
-
-                        <Container className="">
-                            <div className="">
-
-
-                                <div className="w-full px-4 lg:w-screen xl:w-full">
-                                    <Formik
-                                        initialValues={initialValues}
-                                        onSubmit={onSubmit}
-                                        validationSchema={JudgesSchema}
-                                    >
-                                        {(formik) => {
-                                            return (
-                                                <Form
-                                                    className={clsx(
-                                                        "relative w-full  p-8 text-base md:text-lg  rounded-lg shadow-xl sm:p-12",
-                                                        theme === "dark" ? "bg-light text-dark" : "bg-light"
-                                                    )}
-                                                >
-                                                    {/* render the step component if it exists */}
-                                                    {stepExists && (
-                                                        <StepComponent
-                                                            onNext={() => {
-                                                                // navigate to next page if it is not the last page using `router.push`
-                                                                if (pageIndex < steps.length) {
-                                                                    const nextPage = pageIndex + 1;
-                                                                    router.push(`/judges?step=${nextPage}`);
-                                                                }
-                                                            }}
-                                                            onPrevious={() => {
-                                                                // navigate to the previous page using `router.push`
-                                                                const prevPage = pageIndex - 1;
-                                                                if (prevPage > 1) {
-                                                                    router.push(`/judges?step=${prevPage}`);
-                                                                } else {
-                                                                    router.push("/judges");
-                                                                }
-                                                            }}
-                                                        />
-                                                    )}
-
-                                                </Form>
-                                            );
-                                        }}
-                                    </Formik>
-                                </div>
+                    <div className="fixed z-10 inset-0 overflow-y-auto">
+                        <div
+                            className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                            <div className="fixed inset-0 transition-opacity">
+                                <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
                             </div>
-                        </Container>
-                    </section>
+                            <span className="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+                            <div
+                                className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                                <h2 className="text-lg font-bold mb-4 text-center">Multi-Step Form</h2>
+                                <div className="flex justify-end">
+                                    <button onClick={onClose}
+                                            className="text-gray-500 hover:text-gray-700">&times;</button>
+                                </div>
+                                <h2
+                                    className={clsx(
+                                        "center mb-6 text-xl md:text-2xl  font-bold uppercase text-white "
+                                        // theme === "dark" ? " text-white" : " text-[#041434]"
+                                    )}
+                                >
+                                    Judges Registration form
+                                </h2>
+                                <section>
 
-                </div>
+
+                                    <Container className="">
+                                        <div className="">
+
+
+                                            <div className="w-full px-4 lg:w-screen xl:w-full">
+                                                <Formik
+                                                    initialValues={initialValues}
+                                                    onSubmit={onSubmit}
+                                                    validationSchema={JudgesSchema}
+                                                >
+                                                    {(formik) => {
+                                                        return (
+                                                            <Form
+                                                                className={clsx(
+                                                                    "relative w-full  p-8 text-base md:text-lg  rounded-lg shadow-xl sm:p-12",
+                                                                    theme === "dark" ? "bg-light text-dark" : "bg-light"
+                                                                )}
+                                                            >
+                                                                {step === 1 && (
+                                                                    <Page1/>
+                                                                )}
+                                                                {step === 2 && (
+                                                                    <Page2/>
+                                                                )}
+                                                                {step === 3 && (
+                                                                    <Page3/>
+                                                                )}
+                                                                {step === 4 && (
+                                                                    <Page4/>
+                                                                )}
+                                                                <div className="p-4 flex justify-between">
+                                                                    {step > 1 && (
+                                                                        <button type="button" onClick={prevStep}
+                                                                                className="btn bg-gray-300 hover:bg-gray-400">Previous</button>
+                                                                    )}
+                                                                    <button type="submit"
+                                                                            className="btn bg-blue-500 hover:bg-blue-700 text-white">{step > 4 ? 'Submit' : 'Next'}</button>
+                                                                </div>
+
+                                                            </Form>
+                                                        );
+                                                    }}
+                                                </Formik>
+                                            </div>
+                                        </div>
+                                    </Container>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
             </motion.div>
         </>
-    );
+);
 };
 
 export default JudgesForm;

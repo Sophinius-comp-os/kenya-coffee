@@ -16,7 +16,7 @@ const genderOptions = [
     { key: "Female", value: 'female' },
 
 ];
-const Page1: FormStepComponentType = (props) => {
+const Page1: FormStepComponentType = () => {
     const { errors } = useFormikContext<InferType<typeof JudgesSchema>>();
     const hasErrors = errors.name || errors.email;
     return (
@@ -47,10 +47,7 @@ const Page1: FormStepComponentType = (props) => {
                 name="gender"
                 options={genderOptions}
             />
-            <Button className='px-8 py-3 text-white rounded bg-black  mt-2' onClick={props.onNext}
-                    disabled={!!hasErrors}>
-                Next
-            </Button>
+
         </div>
     );
 };
