@@ -5,8 +5,8 @@ import TextError from './TextError'
 function RadioButtons (props) {
     const { label, name, options, ...rest } = props
     return (
-        <div className='form-control'>
-            <label>{label}</label>
+        <div className='flex items-center gap-1.5'>
+            <label  className="ml-2">{label}</label>
             <Field name={name} >
                 {({ field }) => {
                     return options.map(option => {
@@ -19,6 +19,7 @@ function RadioButtons (props) {
                                     {...rest}
                                     value={option.value}
                                     checked={field.value === option.value}
+                                    className="form-radio text-indigo-600 h-5 w-5 ml-2"
                                 />
                                 <label htmlFor={option.value}>{option.key}</label>
                             </React.Fragment>

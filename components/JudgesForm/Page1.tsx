@@ -39,13 +39,16 @@ const Page1: FormStepComponentType = (props) => {
                 label="Phone Number"
                 name="phone"
             />
+
+            <h3 className="text-lg font-bold mb-4">Choose a Gender :</h3>
             <FormikControl
                 control="radio"
-                label="Gender"
+
                 name="gender"
                 options={genderOptions}
             />
-            <Button  className='px-8 py-3 text-white rounded bg-green  mt-2 ' onClick={props.onNext} disabled={!!hasErrors}>
+            <Button className='px-8 py-3 text-white rounded bg-black  mt-2' onClick={props.onNext}
+                    disabled={!!hasErrors}>
                 Next
             </Button>
         </div>
