@@ -2,13 +2,14 @@
 
 import React from "react";
 
-import { useFormikContext } from "formik";
+import {Field, useFormikContext} from "formik";
 
 import { InferType } from "yup";
 import FormikControl from "@/components/FormComponents/FormikControl";
 import {FormStepComponentType} from "@/components/JudgesForm/FormStepProps";
 import {JudgesSchema} from "@/components/JudgesForm/judgeFormSchema";
 import {Button} from "@/components/ui/Button";
+import ImageUpload from "@/components/FormComponents/ImageUpload";
 
 
 const genderOptions = [
@@ -48,6 +49,17 @@ const Page1: FormStepComponentType = () => {
                 options={genderOptions}
             />
 
+            <div className='flex justify-between gap-4  items-center w-full'>
+                <label htmlFor="nationalIdImage" className='w-full'>Image  Front </label>
+                <Field name="frontIdImage" component={ImageUpload}/>
+            </div>
+
+            <div className='flex justify-between gap-4 items-center w-full'>
+                <label htmlFor="nationalIdImage" className='w-full'> Image  Back</label>
+                <Field name="backIdImage" component={ImageUpload}/>
+            </div>
+
+            {/*<ErrorMessage name="nationalIdImage" component="div"/>*/}
         </div>
     );
 };

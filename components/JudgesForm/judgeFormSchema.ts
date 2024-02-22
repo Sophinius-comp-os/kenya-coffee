@@ -1,5 +1,15 @@
 import * as Yup from "yup";
 
+
+const MAX_FILE_SIZE = 102400; //100KB
+
+const validFileExtensions = { image: ['jpg', 'png', 'jpeg'] };
+
+function isValidFileType(fileName, fileType) {
+    return fileName && validFileExtensions[fileType].indexOf(fileName.split('.').pop()) > -1;
+}
+
+
 export const JudgesSchema = Yup.object().shape({
     name: Yup.string().max(255).required("You must Enter your Name"),
     email: Yup.string()
@@ -12,7 +22,18 @@ export const JudgesSchema = Yup.object().shape({
             "Your mobile phone number must begin with a '+', followed by your country code then actual number e.g +254123456789"
         ),
     gender: Yup.string().required("Choose your gender"),
-
+    frontIdImage:Yup.mixed()
+    .required("Required")
+    .test("is-valid-type", "Not a valid image type",
+        value => isValidFileType(value && value.name.toLowerCase(), "image"))
+    .test("is-valid-size", "Max allowed size is 100KB",
+        value => value && value.size <= MAX_FILE_SIZE),
+    backIdImage:Yup.mixed()
+        .required("Required")
+        .test("is-valid-type", "Not a valid image type",
+            value => isValidFileType(value && value.name.toLowerCase(), "image"))
+        .test("is-valid-size", "Max allowed size is 100KB",
+            value => value && value.size <= MAX_FILE_SIZE),
     highestEducationLevel: Yup.string().trim().required("Highest Education Level is required"),
     currentEmployer: Yup.string().trim().required("Current Employer is required"),
     numberOfYearsWorked: Yup.string().trim().required("Message is required"),

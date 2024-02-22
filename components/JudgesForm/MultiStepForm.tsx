@@ -38,6 +38,8 @@ const MultiStepForm = ({ onClose }) => {
         email: "",
         name: "",
         phone: "",
+        frontIdImage:"",
+        backIdImage:"",
         highestEducationLevel:"",
         currentEmployer:"",
         numberOfYearsWorked:"",
