@@ -10,14 +10,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id       String    @id @default(auto()) @map("_id") @db.ObjectId
-  slug     String    @unique
-  title    String
-  body     String
-  author   User      @relation(fields: [authorId], references: [id])
-  authorId String    @db.ObjectId
-  comments Comment[]
+model Judge {
+  id                    String  @id @default(auto()) @map("_id") @db.ObjectId
+  name                  String
+  email                 String  @unique
+  phone                 String
+  gender                String
+  highestEducationLevel String
+  currentEmployer       String
+  numberOfYearsWorked   Int
+  nameOfReferee         String
+  emailOfReferee        String
+  phoneOfReferee        String
+  placeOfWork           String
+  judgingCategory       String
+  judgedBefore          Boolean
+  eventJudged           String
+  frontImage            String
+  backImage             String
 }
-
-\
