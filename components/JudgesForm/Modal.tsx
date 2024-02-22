@@ -4,7 +4,11 @@ import MultiStepForm from './MultiStepForm';
 
 ReactModal.setAppElement(document.body);
 
-const Modal = ({ isOpen, onClose }) => {
+interface ModalProps {
+    isOpen:boolean,
+    onClose: () => void;
+}
+const Modal = ({ isOpen, onClose }:ModalProps) => {
     return (
         <ReactModal
             isOpen={isOpen}
