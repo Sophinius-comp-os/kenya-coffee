@@ -3,12 +3,17 @@ import Input from "./Input";
 import TextArea from "./TextArea";
 import Select from "./Select";
 import RadioButtons from "./RadioButtons";
-// import RadioButtons from "./RadioButtons";
-// import CheckBoxGroup from "./CheckBoxGroup";
-// import DatePicker from "./DatePicker";
+import CheckBoxGroup from "./CheckBoxGroup";
 
-const FormikControl = (props) => {
-  const { control, ...rest } = props;
+interface FormikControlProps {
+  control: string;
+  label:string;
+  name:string;
+  options:[];
+  // Define additional props if needed
+}
+
+const FormikControl: React.FC<FormikControlProps> = ({ control, ...rest }) => {
   switch (control) {
     case "input":
       return <Input {...rest} />;
@@ -21,11 +26,13 @@ const FormikControl = (props) => {
 
     case "radio":
       return <RadioButtons {...rest} />;
+
     case "checkbox":
-      return <CheckBoxGroup {...rest} />;
-    // case "date":
-    //   return <DatePicker {...rest} />;
+      return <CheckBoxGroup  {...rest} />;
+
+    default:
+      return null; // Handle unsupported control type
   }
 };
 
-export default FormikControl;
+export default FormikControl

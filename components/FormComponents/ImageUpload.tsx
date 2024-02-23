@@ -1,12 +1,8 @@
-// components/ImageUpload.tsx
-"use client"
-import { FieldProps, ErrorMessage } from 'formik';
 import React, { useState } from 'react';
+import { FieldProps, ErrorMessage } from 'formik';
 
 interface ImageUploadProps extends FieldProps {
-    form: {
-        setFieldValue: (field: string, value: any, shouldValidate?: boolean) => void;
-    };
+    // Additional props if needed
 }
 
 const ImageUpload: React.FC<ImageUploadProps> = ({ field, form, ...props }) => {

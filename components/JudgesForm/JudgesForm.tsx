@@ -7,7 +7,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useTheme } from "next-themes";
 import { Formik, Form, Field } from "formik";
-import { useSearchParams, useRouter } from "next/navigation";
 import { FormStepComponentType } from "./FormStepProps";
 import Container from "@/components/ui/Container";
 import FormikControl from "@/components/FormComponents/FormikControl";
