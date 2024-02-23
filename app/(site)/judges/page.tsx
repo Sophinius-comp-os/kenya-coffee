@@ -25,54 +25,7 @@ const Judges = () => {
     const fontStyles = { fontSize: "40px" };
     const { theme } = useTheme();
 
-
-    const [selectId, setSelectId] = useState(null);
-
-    const [showModal, setShowModal] = useState(false);
-    const childrenOptions = [
-        { key: "one", value: 1 },
-        { key: "two", value: 2 },
-        { key: "three", value: 3 },
-        { key: "four", value: 4 },
-        { key: "five", value: 5 },
-    ];
-    const adultOptions = [
-        { key: "one", value: 1 },
-        { key: "two", value: 2 },
-        { key: "three", value: 3 },
-        { key: "four", value: 4 },
-        { key: "five", value: 5 },
-    ];
-
-    const roomTypeOptions = [
-        { key: "one", value: "One Bed" },
-        { key: "two", value: "Two Bed" },
-        { key: "three", value: "Three Bed" },
-        { key: "four", value: "Four Bed" },
-    ];
-
-    const nightsOptions = [
-        { key: "one", value: 1 },
-        { key: "two", value: 2 },
-        { key: "three", value: 3 },
-        { key: "four", value: 4 },
-        { key: "five", value: 5 },
-    ];
-    const initialValues = {
-        email: "",
-        name: "",
-        phoneNumber: "",
-        roomType: "one",
-        bookingDate: null,
-        nights: "one",
-        adults: "one",
-        children: "one",
-        message: "",
-    };
-
-    const [message, setMessage] = useState(""); // This will be used to show a message if the submission is successful
     const [submitted, setSubmitted] = useState(false);
-    console.log(submitted);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -84,64 +37,6 @@ const Judges = () => {
         setIsModalOpen(false);
     };
 
-    // const [startDate, setStartDate] = useState(new Date());
-
-    const validationSchema = Yup.object().shape({
-        name: Yup.string().max(255).required("You must Enter your Name"),
-        email: Yup.string()
-            .email("Must be a valid email")
-            .max(255)
-            .required("Email is required"),
-        phoneNumber: Yup.string()
-            .max(20)
-            .required(
-                "Your mobile phone number must begin with a '+', followed by your country code then actual number e.g +254123456789"
-            ),
-        subject: Yup.string().max(255).required("You must Enter the subject "),
-        bookingDate: Yup.date().required("Required").nullable(),
-        nights: Yup.string().required("Required"),
-        adults: Yup.string().required("Required"),
-        children: Yup.string().required("Required"),
-        message: Yup.string().trim().required("Message is required"),
-    });
-
-    const onSubmit = async (values) => {
-        setMessage("Form submitted");
-        setSubmitted(true);
-        console.log(values);
-
-        const {
-            email,
-            name,
-            subject,
-            phoneNumber,
-            roomType,
-            bookingDate,
-            nights,
-            adults,
-            children,
-            message,
-        } = values;
-        const res = await fetch("/api/SendBookingMail", {
-            body: JSON.stringify({
-                email,
-                name,
-                phoneNumber,
-                subject,
-                roomType,
-                bookingDate: bookingDate.split("T", 1)[0],
-                nights,
-                adults,
-                children,
-                message,
-            }),
-            headers: {
-                "Content-Type": "application/json",
-            },
-            method: "POST",
-        });
-        setShowModal(!showModal);
-    };
     return (
         <>
         <motion.div

@@ -11,7 +11,7 @@ interface FormValues {
     backIdImage: File | null;
     highestEducationLevel: string;
     currentEmployer: string;
-    numberOfYearsWorked: string; // Adjusted to string type
+    numberOfYearsWorked: number; // Adjusted to string type
     nameOfReferee: string;
     emailOfReferee: string;
     phoneOfReferee: string;
@@ -36,14 +36,14 @@ export const JudgesSchema = Yup.object().shape({
         .test("is-valid-size", "Max allowed size is 1MB", (value) => isValidFileSize(value)),
     highestEducationLevel: Yup.string().required("Highest Education Level is required"),
     currentEmployer: Yup.string().required("Current Employer is required"),
-    numberOfYearsWorked: Yup.string().required("Number of Years Worked is required"), // Adjusted to string type
-    nameOfReferee: Yup.string().max(255).required("You must enter the Name of Referee"),
+    numberOfYearsWorked: Yup.number().required("Number of Years Worked is required"), // Adjusted to string type
+    nameOfReferee: Yup.string().required("You must enter the Name of Referee"),
     emailOfReferee: Yup.string().email("Must be a valid email").max(255).required("Email of Referee is required"),
-    phoneOfReferee: Yup.string().max(20).required("Phone of Referee is required"),
-    placeOfWork: Yup.string().max(255).required("Place of Work is required"),
-    judgingCategory: Yup.string().max(255).required("Judging Category is required"),
+    phoneOfReferee: Yup.string().required("Phone of Referee is required"),
+    placeOfWork: Yup.string().required("Place of Work is required"),
+    //judgingCategory: Yup.string().required("Judging Category is required"),
     judgedBefore: Yup.boolean().required("You must specify if you have been a judge before"),
-    eventJudged: Yup.string().max(255).required("Event Judged is required"),
+    eventJudged: Yup.string().required("Event Judged is required"),
 });
 
 function isValidFileType(file: File | null, fileType: string): boolean {

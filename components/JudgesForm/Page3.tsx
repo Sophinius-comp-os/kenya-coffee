@@ -11,7 +11,7 @@ import {JudgesSchema} from "@/components/JudgesForm/judgeFormSchema";
 import {Button} from "@/components/ui/Button";
 
 
-const Page3: FormStepComponentType = () => {
+const Page3 = () => {
     const { errors } = useFormikContext<InferType<typeof JudgesSchema>>();
     const hasErrors = errors.name || errors.email;
     return (
