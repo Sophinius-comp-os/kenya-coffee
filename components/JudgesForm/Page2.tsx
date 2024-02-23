@@ -18,7 +18,7 @@ const educationOptions = [
     { key: "Master's degree", value: "Master's degree" },
 ];
 
-const Page2: FormStepComponentType = () => {
+const Page2 = () => {
     const { errors } = useFormikContext<InferType<typeof JudgesSchema>>();
     const hasErrors = errors.name || errors.email;
     return (
@@ -37,9 +37,9 @@ const Page2: FormStepComponentType = () => {
             />
             <FormikControl
                 control="input"
-                type="text"
+                type="number"
                 label="No of Years Worked"
-                name="phone"
+                name="numberOfYearsWorked"
             />
 
 

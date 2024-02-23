@@ -17,7 +17,7 @@ const genderOptions = [
     { key: "Female", value: 'female' },
 
 ];
-const Page1: FormStepComponentType = () => {
+const Page1 = () => {
     const { errors } = useFormikContext<InferType<typeof JudgesSchema>>();
     const hasErrors = errors.name || errors.email;
     return (
@@ -59,7 +59,7 @@ const Page1: FormStepComponentType = () => {
                 <Field name="backIdImage" component={ImageUpload}/>
             </div>
 
-            {/*<ErrorMessage name="nationalIdImage" component="div"/>*/}
+        {/*    /!*<ErrorMessage name="nationalIdImage" component="div"/>*!/*/}
         </div>
     );
 };
