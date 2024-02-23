@@ -13,12 +13,12 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET!,
 });
 
-// Next.js API configuration
-export const config = {
-    api: {
-        bodyParser: false, // Disable body parsing, let multer handle it
-    },
-};
+// // Next.js API configuration
+// export const config = {
+//     api: {
+//         bodyParser: false, // Disable body parsing, let multer handle it
+//     },
+// };
 
 // Upload handler
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
