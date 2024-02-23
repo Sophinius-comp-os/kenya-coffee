@@ -26,6 +26,6 @@ model Judge {
   judgingCategory       String
   judgedBefore          Boolean
   eventJudged           String
-  frontImage            String
-  backImage             String
+  frontIdImage          String
+  backIdImage           String
 }
