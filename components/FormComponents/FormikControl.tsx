@@ -8,6 +8,7 @@ import CheckBoxGroup from "./CheckBoxGroup";
 interface FormikControlProps {
   control: string;
   label:string;
+  type:string;
   name:string;
   options:[];
   // Define additional props if needed

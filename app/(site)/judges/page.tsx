@@ -1,24 +1,15 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import React, {useState} from 'react';
-import JudgesForm from "@/components/JudgesForm/JudgesForm";
-import Page4 from "@/components/JudgesForm/Page4";
-import Page1 from "@/components/JudgesForm/Page1";
-import Page2 from "@/components/JudgesForm/Page2";
-import Page3 from "@/components/JudgesForm/Page3";
 import clsx from "clsx";
 import {FaBuilding, FaPhoneAlt} from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
 import Container from "@/components/ui/Container";
 import Image from "next/image";
 import {useTheme} from "next-themes";
-import {Form, Formik} from "formik";
-import FormikControl from "@/components/FormComponents/FormikControl";
-import * as Yup from "yup";
-import Link from "next/link";
-import MultiStepForm from "@/components/JudgesForm/MultiStepForm";
+
 import Modal from "@/components/JudgesForm/Modal";
-import {Button} from "@/components/ui/Button";
+
 
 
 const Judges = () => {

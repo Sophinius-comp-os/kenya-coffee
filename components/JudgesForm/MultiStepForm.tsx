@@ -195,8 +195,10 @@ interface FormValues {
     email: string;
     name: string;
     phone: string;
-    frontIdImage: string;
-    backIdImage: string;
+    // frontIdImage: string;
+    // backIdImage: string;
+    frontIdImage: File | null;
+    backIdImage: File | null;
     highestEducationLevel: string;
     currentEmployer: string;
     numberOfYearsWorked:number;
@@ -204,6 +206,7 @@ interface FormValues {
     emailOfReferee: string;
     phoneOfReferee: string;
     placeOfWork: string;
+    judgingCategory:string,
     judgedBefore: boolean;
     eventJudged: string;
 }
@@ -216,13 +219,13 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
     const nextStep = () => setStep(step + 1);
     const prevStep = () => setStep(step - 1);
-
+    const [submitting, setSubmitting] = useState(false);
     const initialValues: FormValues = {
         email: "",
         name: "",
         phone: "",
-        frontIdImage: "",
-        backIdImage: "",
+        frontIdImage: null,
+        backIdImage: null,
         highestEducationLevel: "",
         currentEmployer: "",
         numberOfYearsWorked:1,
@@ -230,54 +233,128 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         emailOfReferee: "",
         phoneOfReferee: "",
         placeOfWork: "",
+        judgingCategory:"",
         judgedBefore:false,
         eventJudged: "",
     };
 
-    const submitForm = async (values: FormValues, onClose: () => void) => {
+
+    const onSubmit = async (values: FormValues, { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }) => {
         try {
-            const formData = createFormData(values);
-            const response = await uploadFormData(formData);
-            console.log('Images uploaded successfully:', response.data);
-            onClose();
+            if (step === 4) {
+                setSubmitting(true);
+
+                // // Upload frontIdImage to Cloudinary
+                // const frontImageFormData = new FormData();
+                // if (values.frontIdImage) {
+                //     frontImageFormData.append('file', values.frontIdImage);
+                //     const frontImageResponse = await axios.post('CLOUDINARY_UPLOAD_URL', frontImageFormData);
+                //     values.frontIdImage = frontImageResponse.data.secure_url;
+                // }
+                //
+                // // Upload backIdImage to Cloudinary
+                // const backImageFormData = new FormData();
+                // if (values.backIdImage) {
+                //     backImageFormData.append('file', values.backIdImage);
+                //     const backImageResponse = await axios.post('CLOUDINARY_UPLOAD_URL', backImageFormData);
+                //     values.backIdImage = backImageResponse.data.secure_url;
+                // }
+
+                // Submit form data to MongoDB service
+                // console.log(values.frontIdImage)
+                // await axios.post('/api/upload', values);
+                //
+                // // Reset form and state
+                // onClose();
+
+                const formData = new FormData();
+                Object.entries(values).forEach(([key, value]) => {
+                    if (value instanceof File) {
+                        formData.append(key, value);
+                    } else {
+                        formData.append(key, JSON.stringify(value));
+                    }
+                });
+
+                // Submit form data to backend API route
+                await axios.post('/api/upload', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+
+                // Reset form and state or perform any other necessary actions
+                onClose();
+            } else {
+                setStep(step + 1);
+            }
         } catch (error) {
-            console.error('Error uploading images:', error);
-            // Handle error if needed
+            console.error('Error submitting form:', error);
+            // Handle error (e.g., display error message to user)
         } finally {
-            // Clean up or perform any final actions if needed
+            setSubmitting(false);
         }
     };
 
-    function createFormData(values: FormValues): FormData {
-        const formData = new FormData();
 
-        // Append fields from each page
-        formData.append('name', values.name);
-        formData.append('email', values.email);
-        formData.append('phone', values.phone);
-        formData.append('frontIdImage', values.frontIdImage);
-        formData.append('backIdImage', values.backIdImage);
-        formData.append('highestEducationLevel', values.highestEducationLevel);
-        formData.append('currentEmployer', values.currentEmployer);
-        formData.append('numberOfYearsWorked', values.numberOfYearsWorked);
-        formData.append('nameOfReferee', values.nameOfReferee);
-        formData.append('emailOfReferee', values.emailOfReferee);
-        formData.append('phoneOfReferee', values.phoneOfReferee);
-        formData.append('placeOfWork', values.placeOfWork);
-        // formData.append('judgingCategory', values.judgingCategory);
-        formData.append('judgedBefore', values.judgedBefore.toString());
-        formData.append('eventJudged', values.eventJudged);
+    // const submitForm = async (values: FormValues, onClose: () => void) => {
+    //     console.log('my values', values.backIdImage)
+    //     try {
+    //         const formData = createFormData(values);
+    //         setSubmitting(true)
+    //         const response = await uploadFormData(formData);
+    //         console.log('Images uploaded successfully:', response.data);
+    //         onClose();
+    //     } catch (error) {
+    //         setSubmitting(false)
+    //         console.error('Error uploading images:', error.message);
+    //         // Handle error if needed
+    //     } finally {
+    //         // Clean up or perform any final actions if needed
+    //         setSubmitting(false)
+    //     }
+    // };
 
-        return formData;
-    }
-
-    async function uploadFormData(formData: FormData) {
-        return await axios.post('/api/upload', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            },
-        });
-    }
+    // function createFormData(values: FormValues): FormData {
+    //
+    //
+    //
+    //     const frontIdImage = values.frontIdImage[0]
+    //     const backIdImage = values.backIdImage[0]
+    //
+    //     const formData = new FormData();
+    //     // formData.append('file', frontIdImage);
+    //     // formData.append('file', backIdImage);
+    //     // Append fields from each page
+    //     formData.append('name', values.name);
+    //     formData.append('email', values.email);
+    //     formData.append('phone', values.phone);
+    //     formData.append('file', frontIdImage);
+    //     formData.append('file', backIdImage);
+    //     // formData.append('frontIdImage', values.frontIdImage);
+    //     // formData.append('backIdImage', values.backIdImage);
+    //     formData.append('highestEducationLevel', values.highestEducationLevel);
+    //     formData.append('currentEmployer', values.currentEmployer);
+    //     formData.append('numberOfYearsWorked', values.numberOfYearsWorked);
+    //     formData.append('nameOfReferee', values.nameOfReferee);
+    //     formData.append('emailOfReferee', values.emailOfReferee);
+    //     formData.append('phoneOfReferee', values.phoneOfReferee);
+    //     formData.append('placeOfWork', values.placeOfWork);
+    //     // formData.append('judgingCategory', values.judgingCategory);
+    //     formData.append('judgedBefore', values.judgedBefore.toString());
+    //     formData.append('eventJudged', values.eventJudged);
+    //
+    //
+    //     return formData;
+    // }
+    //
+    // async function uploadFormData(formData: FormData) {
+    //     return await axios.post('/api/upload', formData, {
+    //         headers: {
+    //             'Content-Type': 'multipart/form-data',
+    //         },
+    //     });
+    // }
 
 
     return (
@@ -294,16 +371,7 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     </div>
                     <Formik
                         initialValues={initialValues}
-                       // validationSchema={JudgesSchema} // Add validation schema
-                        onSubmit={(values, actions) => {
-
-                                if (step === 4) {
-                                 submitForm(values, onClose)
-                                } else {
-                                    nextStep();
-                                }
-                            }
-                        }
+                        onSubmit={onSubmit}
                     >
                         {({ isSubmitting, isValid, dirty }) => (
                             <Form
@@ -331,3 +399,65 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 };
 
 export default MultiStepForm;
+
+//
+// import { Formik, Form, Field } from 'formik';
+// import axios from 'axios';
+//
+// const onSubmit = async (values, { setSubmitting }) => {
+//     try {
+//         // Upload frontIdImage to Cloudinary
+//         const frontImageFormData = new FormData();
+//         frontImageFormData.append('file', values.frontIdImage);
+//         const frontImageResponse = await axios.post('CLOUDINARY_UPLOAD_URL', frontImageFormData);
+//
+//         // Upload backIdImage to Cloudinary
+//         const backImageFormData = new FormData();
+//         backImageFormData.append('file', values.backIdImage);
+//         const backImageResponse = await axios.post('CLOUDINARY_UPLOAD_URL', backImageFormData);
+//
+//         // Submit form data to MongoDB service
+//         await axios.post('MONGODB_API_URL', {
+//             name: values.name,
+//             email: values.email,
+//             password: values.password,
+//             frontIdImageUrl: frontImageResponse.data.secure_url,
+//             backIdImageUrl: backImageResponse.data.secure_url
+//         });
+//
+//         // Reset form and state
+//         // Optionally, you can redirect the user to another page or show a success message
+//     } catch (error) {
+//         console.error('Error submitting form:', error);
+//         // Handle error (e.g., display error message to user)
+//     } finally {
+//         setSubmitting(false);
+//     }
+// };
+//
+// // Your form component
+// const MyForm = () => (
+//     <Formik
+//         initialValues={{
+//             name: '',
+//             email: '',
+//             password: '',
+//             frontIdImage: null,
+//             backIdImage: null
+//         }}
+//         onSubmit={onSubmit}
+//     >
+//         {({ isSubmitting, setFieldValue }) => (
+//             <Form>
+//                 <Field type="text" name="name" placeholder="Name" />
+//                 <Field type="email" name="email" placeholder="Email" />
+//                 <Field type="password" name="password" placeholder="Password" />
+//                 <input type="file" onChange={(event) => setFieldValue('frontIdImage', event.currentTarget.files[0])} />
+//                 <input type="file" onChange={(event) => setFieldValue('backIdImage', event.currentTarget.files[0])} />
+//                 <button type="submit" disabled={isSubmitting}>Submit</button>
+//             </Form>
+//         )}
+//     </Formik>
+// );
+//
+// export default MyForm;
