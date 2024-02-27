@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import Navbar from "@/components/ui/Header/Navbar";
-import Provider  from "./providers";
+import Provider  from "@/providers/theme-provider";
 import Footer from "../../components/ui/Footer";
 import classNames from "classnames";
 import {cookies} from "next/headers";
 import Template from "@/app/(site)/template";
 import siteMetadata from '@/lib/siteMetaData'
+import { ToastProvider } from '@/providers/toast-provider'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,8 +69,10 @@ export default function RootLayout({
       >
       <body>
         <Provider>
+
           <Navbar />
           <Template>
+            <ToastProvider />
           {children}
           </Template>
           <Footer />
