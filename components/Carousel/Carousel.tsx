@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import ImagesData from "./Items";
 import Image from "next/image";
 import Link from "next/link";
+import {cn} from "@/lib/utils"
 import clsx from 'clsx'
 import {useTheme} from "next-themes";
 
@@ -33,7 +34,7 @@ export default function ResponsiveCarousel() {
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            <div className={clsx("hidden md:block absolute left-0 top-1/2 p-4 w-full md:w-1/2   bg-opacity-25 text-white inset-0 bg-black  rounded-r-md transform -translate-y-1/2 items-center z-10", theme==='light' ? 'bg-black text-white' : 'bg-white text-black')}>
+            <div className={cn("hidden md:block absolute left-0 top-1/2 p-4 w-full md:w-1/2   bg-opacity-25 text-white inset-0 bg-black  rounded-r-md transform -translate-y-1/2 items-center z-10", theme==='light' ? 'bg-black text-white' : 'bg-white text-black')}>
 
                 <h1 className="font-display text-base sm:text-2xl lg:text-3xl mb-2 font-bold text-white !important z-20">
                   Kenya Coffee Events
