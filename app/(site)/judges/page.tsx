@@ -8,7 +8,7 @@ import Container from "@/components/ui/Container";
 import Image from "next/image";
 import {useTheme} from "next-themes";
 
-import Modal from "@/components/JudgesForm/Modal";
+import Modal from "@/app/(site)/judges/components/JudgesForm/Modal";
 
 
 
