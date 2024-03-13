@@ -9,6 +9,9 @@ import { useTheme } from "next-themes";
 import { toast } from "react-hot-toast"
 import { Button } from "@/components/ui/Button";
 import Page1 from "@/app/(site)/judges/components/JudgesForm/Page1";
+import Page2 from "@/app/(site)/judges/components/JudgesForm/Page2";
+import Page3 from "@/app/(site)/judges/components/JudgesForm/Page3";
+import Page4 from "@/app/(site)/judges/components/JudgesForm/Page4";
 import {JudgesSchema} from "@/app/(site)/judges/components/JudgesForm/judgeFormSchema";
 interface FormValues {
     name: string;

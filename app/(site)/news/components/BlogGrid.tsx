@@ -8,7 +8,7 @@ import Container from "@/components/ui/Container";
 export function BlogGrid({ posts }: { posts: [PostTypes] }) {
 
     return (
-        <Container classNmae=''>
+        <Container className=''>
         <div
             className={clsx(
                 "relative grid max-w-lg gap-10 mx-auto mt-14 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-10 xl:gap-x-10 xl:gap-y-10",
