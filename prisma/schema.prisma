@@ -11,21 +11,22 @@ datasource db {
 }
 
 model Judge {
-  id           String @id @default(auto()) @map("_id") @db.ObjectId
-  name         String
-  email        String @unique
-  phone        String
-  gender       String
-  frontIdImage String
-  backIdImage  String
-  // highestEducationLevel String
-  // currentEmployer       String
-  // numberOfYearsWorked   Int
-  // nameOfReferee         String
-  // emailOfReferee        String
-  // phoneOfReferee        String
-  // placeOfWork           String
-  // judgingCategory       String
-  // judgedBefore          Boolean
-  // eventJudged           String
+  id                    String  @id @default(auto()) @map("_id") @db.ObjectId
+  name                  String
+  email                 String  @unique
+  phone                 String
+  gender                String
+  // frontIdImage String
+  // backIdImage  String
+  idNumber              Int
+  highestEducationLevel String
+  currentEmployer       String
+  numberOfYearsWorked   Int
+  nameOfReferee         String
+  emailOfReferee        String
+  phoneOfReferee        String
+  placeOfWork           String
+  judgingCategory       String
+  judgedBefore          Boolean
+  eventJudged           String
 }
