@@ -99,8 +99,9 @@ interface FormValues {
     email: string;
     phone: string;
     gender: string;
-    frontIdImage: File | null;
-    backIdImage: File | null;
+    idNumber:number;
+    // frontIdImage: File | null;
+    // backIdImage: File | null;
     highestEducationLevel: string;
     currentEmployer: string;
     numberOfYearsWorked: number;
@@ -118,18 +119,19 @@ export const JudgesSchema = Yup.object().shape({
     email: Yup.string().email("Must be a valid email").max(255).required("Email is required"),
     phone: Yup.string().max(20).required("Your mobile phone number is required"),
     gender: Yup.string().oneOf(["male", "female"]).required("Gender is required"),
-    frontIdImage: Yup.mixed().when("step", {
-        is: 4, // Only validate when on step 4 (submission)
-        then: Yup.mixed().required("Required")
-    })
-        .test("FILE_SIZE", "File too big", (value) => !value || value.size <= MAX_FILE_SIZE)
-        .test("FILE_TYPE", "Invalid file type", (value) => !value || ['image/png', 'image/jpg', 'image/jpeg'].includes(value.type)),
-    backIdImage: Yup.mixed().when("step", {
-        is: 4, // Only validate when on step 4 (submission)
-        then: Yup.mixed().required("Required")
-    })
-        .test("FILE_SIZE", "File too big", (value) => !value || value.size <= MAX_FILE_SIZE)
-        .test("FILE_TYPE", "Invalid file type", (value) => !value || ['image/png', 'image/jpg', 'image/jpeg'].includes(value.type)),
+    // frontIdImage: Yup.mixed().when("step", {
+    //     is: 4, // Only validate when on step 4 (submission)
+    //     then: Yup.mixed().required("Required")
+    // })
+    //     .test("FILE_SIZE", "File too big", (value) => !value || value.size <= MAX_FILE_SIZE)
+    //     .test("FILE_TYPE", "Invalid file type", (value) => !value || ['image/png', 'image/jpg', 'image/jpeg'].includes(value.type)),
+    // backIdImage: Yup.mixed().when("step", {
+    //     is: 4, // Only validate when on step 4 (submission)
+    //     then: Yup.mixed().required("Required")
+    // })
+    //     .test("FILE_SIZE", "File too big", (value) => !value || value.size <= MAX_FILE_SIZE)
+    //     .test("FILE_TYPE", "Invalid file type", (value) => !value || ['image/png', 'image/jpg', 'image/jpeg'].includes(value.type)),
+    idNumber: Yup.number().required("Your Id Number is required"),
     highestEducationLevel: Yup.string().required("Highest Education Level is required"),
     currentEmployer: Yup.string().required("Current Employer is required"),
     numberOfYearsWorked: Yup.number().required("Number of Years Worked is required"),

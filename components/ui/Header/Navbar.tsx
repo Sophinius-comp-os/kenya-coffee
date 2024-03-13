@@ -34,14 +34,15 @@ const links = [
     label: "Gallery",
     href: "/gallery",
   },
+    {
+        label: "Judges",
+        href: "/judges",
+    },
   {
     label: "Contact Us",
     href: "/contact",
   },
-    {
-  label: "Judges",
-  href: "/judges",
-},
+
   {
     label: "Login ",
     href: "/studio",

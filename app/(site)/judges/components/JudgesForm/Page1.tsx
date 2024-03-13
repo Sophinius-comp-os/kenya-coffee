@@ -65,6 +65,12 @@ const Page1 = ({ formik })=> {
                 name="gender"
                 options={genderOptions}
             />
+             <FormikControl
+            control="input"
+            type="number"
+            label="Id  Number"
+            name="idNumber"
+        />
 
             {/*<div className='flex justify-between gap-4  items-center w-full'>*/}
             {/*    <label htmlFor="frontIdImage" className='w-full'>Image Front </label>*/}
@@ -76,26 +82,26 @@ const Page1 = ({ formik })=> {
             {/*</div>*/}
 
 
-            <div className='flex justify-between gap-4  items-center w-full'>
-                <label htmlFor="frontIdImage" className='w-full'>Image Front </label>
-                <ImageUpload
-                    cloudName="dkgbj1pny" // Replace with your Cloudinary cloud name
-                    uploadPreset="kenyacoffee" // Replace with your Cloudinary upload preset
-                    field="frontIdImage" // Specify the form field name for storing the image URL
-                    onChange={(url) => formik.setFieldValue("image", url)}
-               // Disable upload button while submitting
-                />
-            </div>
-            <div className='flex justify-between gap-4 items-center w-full'>
-                <label htmlFor="backIdImage" className='w-full'> Image Back</label>
-                <ImageUpload
-                    cloudName="dkgbj1pny" // Replace with your Cloudinary cloud name
-                    uploadPreset="kenyacoffee" // Replace with your Cloudinary upload preset
-                    field="backIdImage" // Specify the form field name for storing the image URL
-                    onChange={(url) => formik.setFieldValue("image", url)}
-                   // Disable upload button while submitting
-                />
-            </div>
+            {/*<div className='flex justify-between gap-4  items-center w-full'>*/}
+            {/*    <label htmlFor="frontIdImage" className='w-full'>Image Front </label>*/}
+            {/*    <ImageUpload*/}
+            {/*        cloudName="dkgbj1pny" // Replace with your Cloudinary cloud name*/}
+            {/*        uploadPreset="kenyacoffee" // Replace with your Cloudinary upload preset*/}
+            {/*        field="frontIdImage" // Specify the form field name for storing the image URL*/}
+            {/*        onChange={(url) => formik.setFieldValue("image", url)}*/}
+            {/*   // Disable upload button while submitting*/}
+            {/*    />*/}
+            {/*</div>*/}
+            {/*<div className='flex justify-between gap-4 items-center w-full'>*/}
+            {/*    <label htmlFor="backIdImage" className='w-full'> Image Back</label>*/}
+            {/*    <ImageUpload*/}
+            {/*        cloudName="dkgbj1pny" // Replace with your Cloudinary cloud name*/}
+            {/*        uploadPreset="kenyacoffee" // Replace with your Cloudinary upload preset*/}
+            {/*        field="backIdImage" // Specify the form field name for storing the image URL*/}
+            {/*        onChange={(url) => formik.setFieldValue("image", url)}*/}
+            {/*       // Disable upload button while submitting*/}
+            {/*    />*/}
+            {/*</div>*/}
 
 
         </div>

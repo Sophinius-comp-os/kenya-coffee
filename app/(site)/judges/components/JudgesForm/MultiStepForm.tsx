@@ -15,18 +15,19 @@ interface FormValues {
     email: string;
     phone: string;
     gender: string;
-    frontIdImage: File | null;
-    backIdImage: File | null;
-    // highestEducationLevel: string;
-    // currentEmployer: string;
-    // numberOfYearsWorked: number;
-    // nameOfReferee: string;
-    // emailOfReferee: string;
-    // phoneOfReferee: string;
-    // placeOfWork: string;
-    // judgingCategory: string;
-    // judgedBefore: boolean;
-    // eventJudged: string;
+    idNumber:number;
+    // frontIdImage: File | null;
+    // backIdImage: File | null;
+    highestEducationLevel: string;
+    currentEmployer: string;
+    numberOfYearsWorked: number;
+    nameOfReferee: string;
+    emailOfReferee: string;
+    phoneOfReferee: string;
+    placeOfWork: string;
+    judgingCategory: string;
+    judgedBefore: boolean;
+    eventJudged: string;
 
 }
 
@@ -42,50 +43,52 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         name: "",
         phone: "",
         gender:"",
-        frontIdImage: null,
-        backIdImage:null,
-        // highestEducationLevel:"",
-        // currentEmployer:"",
-        // numberOfYearsWorked:1,
-        // nameOfReferee:"",
-        // emailOfReferee:"",
-        // phoneOfReferee:"",
-        // placeOfWork:"",
-        // judgingCategory:"",
-        // judgedBefore:false,
-        // eventJudged:"",
+        idNumber:0,
+        highestEducationLevel:"",
+        currentEmployer:"",
+        numberOfYearsWorked:1,
+        nameOfReferee:"",
+        emailOfReferee:"",
+        phoneOfReferee:"",
+        placeOfWork:"",
+        judgingCategory:"",
+        judgedBefore:false,
+        eventJudged:"",
+
+        // frontIdImage: null,
+        // backIdImage:null,
     }
 
-    async function handleCloudinaryUpload(file: File): Promise<string> {
-        const formData = new FormData();
-        formData.append('file', file);
-
-        // Replace with your secure credential retrieval method
-
-        const uploadPreset =process.env.CLOUDINARY_CLOUD_NAME;
-        const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
-
-        if (!uploadPreset || !cloudName) {
-            throw new Error('Missing Cloudinary credentials (uploadPreset and cloudName)');
-        }
-
-        formData.append('upload_preset', uploadPreset);
-        formData.append('cloud_name', cloudName);
-
-        try {
-            const response = await axios.post('https://api.cloudinary.com/v1/image/upload', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
-
-            const data = await response.data;
-            return data.secure_url; // Return the uploaded image URL
-        } catch (error) {
-            console.error('Error uploading image to Cloudinary:', error);
-            throw new Error('Error uploading image'); // Re-throw for handling in the form component
-        }
-    }
+    // async function handleCloudinaryUpload(file: File): Promise<string> {
+    //     const formData = new FormData();
+    //     formData.append('file', file);
+    //
+    //     // Replace with your secure credential retrieval method
+    //
+    //     const uploadPreset =process.env.CLOUDINARY_CLOUD_NAME;
+    //     const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
+    //
+    //     if (!uploadPreset || !cloudName) {
+    //         throw new Error('Missing Cloudinary credentials (uploadPreset and cloudName)');
+    //     }
+    //
+    //     formData.append('upload_preset', uploadPreset);
+    //     formData.append('cloud_name', cloudName);
+    //
+    //     try {
+    //         const response = await axios.post('https://api.cloudinary.com/v1/image/upload', formData, {
+    //             headers: {
+    //                 'Content-Type': 'multipart/form-data',
+    //             },
+    //         });
+    //
+    //         const data = await response.data;
+    //         return data.secure_url; // Return the uploaded image URL
+    //     } catch (error) {
+    //         console.error('Error uploading image to Cloudinary:', error);
+    //         throw new Error('Error uploading image'); // Re-throw for handling in the form component
+    //     }
+    // }
 
 
     const onSubmit = async (
@@ -102,11 +105,11 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
             setSubmitting(true); // Set submitting state for UI feedback
 
-            // Upload images and get image URLs
-            const imageUrls = await Promise.all([
-                handleCloudinaryUpload(values.frontIdImage),
-                handleCloudinaryUpload(values.backIdImage),
-            ]);
+            // // Upload images and get image URLs
+            // const imageUrls = await Promise.all([
+            //     handleCloudinaryUpload(values.frontIdImage),
+            //     handleCloudinaryUpload(values.backIdImage),
+            // ]);
 
             // Create FormData for form submission
             const formData = new FormData();
@@ -114,6 +117,18 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             formData.append('email', values.email);
             formData.append('phone', values.phone);
             formData.append('gender', values.gender);
+            formData.append('idNumber', values.idNumber);
+            formData.append('highestEducationLevel', values.highestEducationLevel);
+            formData.append('currentEmployer', values.currentEmployer);
+                formData.append('numberOfYearsWorked', values.numberOfYearsWorked),
+                formData.append('nameOfReferee', values.nameOfReferee);
+            formData.append('emailOfReferee', values.emailOfReferee);
+            formData.append('phoneOfReferee', values.phoneOfReferee);
+            formData.append('placeOfWork', values.placeOfWork);
+            formData.append('judgingCategory', values.judgingCategory)
+            formData.append('judgedBefore', values.judgedBefore);
+            formData.append('eventJudged', values.eventJudged)
+
 
             console.log('Form data:', formData); // Log for debugging
 
@@ -154,21 +169,23 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     <Formik
                         initialValues={initialValues}
                         onSubmit={onSubmit}
-                        validationSchema={JudgesSchema}
-
+                        // validationSchema={JudgesSchema}
                     >
-                        {({ isSubmitting, isValid, dirty, formik }) => (
+                        {({ isSubmitting, isValid, dirty }) => (
                             <Form
                                 className={clsx("relative w-full p-8 text-base md:text-lg rounded-lg shadow-xl sm:p-12 py-2", theme === "dark" ? "bg-light text-dark" : "bg-light")}>
-                                {step === 1 && <Page1 formik={formik} />}  {/* Pass formik as a prop */}
-
+                                {step === 1 && <Page1/>}
+                                {step === 2 && <Page2/>}
+                                {step === 3 && <Page3/>}
+                                {step === 4 && <Page4/>}
                                 <div className="p-4 flex justify-between">
-                                    {/*{step > 1 && (*/}
-                                    {/*    <button type="button" onClick={prevStep}*/}
-                                    {/*            className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">Previous</button>*/}
-                                    {/*)}*/}
-                                    <button type="submit" disabled={!isValid || !dirty} onClick={() =>console.log('clicked')}
-                                            className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">Submit</button>
+                                    {step > 1 && (
+                                        <button type="button" onClick={prevStep}
+                                                className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">Previous</button>
+                                    )}
+                                    <button type="submit" disabled={!isValid || !dirty}
+                                        // onClick={nextStep}
+                                            className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">{step === 4 ? 'Submit' : 'Next'}</button>
                                 </div>
                             </Form>
                         )}

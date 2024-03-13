@@ -115,25 +115,34 @@ const Footer = () => {
 
                 <div className="text-center sm:text-left">
                   <h2 className=" text-xl md:text-2xl font-semibold ">
-                    Helpful Links
+                    Social Links
                   </h2>
 
                   <ul className="mt-8 text-lg md:text-xl  space-y-4">
                     <li>
                       <Link
-                        className=" transition hover:text-gray-700/75"
-                        href="/public"
+                          className=" transition hover:text-gray-700/75"
+                          href="https://www.facebook.com/CoffeeEventsKE?mibextid=kFxxJD"
                       >
-                        FAQs
+                        Facebook
                       </Link>
                     </li>
 
+                 
                     <li>
                       <Link
-                        className=" transition hover:text-gray-700/75"
-                        href="/public"
+                          className=" transition hover:text-gray-700/75"
+                          href="https://www.instagram.com/coffeeeventske"
                       >
-                        Support
+                        Instagram
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                          className=" transition hover:text-gray-700/75"
+                          href="https://twitter.com/CoffeeEventsKE"
+                      >
+                     Twitter
                       </Link>
                     </li>
                   </ul>

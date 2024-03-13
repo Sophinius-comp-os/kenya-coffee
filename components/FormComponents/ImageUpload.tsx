@@ -14,11 +14,13 @@ interface ImageUploadProps extends FieldProps {
 const ImageUpload: React.FC<ImageUploadProps> = ({ field, form, cloudName, uploadPreset, onChange, disabled }) => {
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
+    console.log(previewUrl)
     const handleImageUpload = (response: CldUploadResponse) => {
         console.log(response.secure_url)
-        const imageUrl: string | undefined = response?.secure_url;
+        const imageUrl = response?.secure_url;
         if (imageUrl) {
             setPreviewUrl(imageUrl);
+            console.log(imageUrl)
             form.setFieldValue(field.name, imageUrl);
             onChange(imageUrl);
         }
