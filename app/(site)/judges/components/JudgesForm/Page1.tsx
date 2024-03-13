@@ -7,8 +7,7 @@ import { InferType } from "yup";
 import FormikControl from "@/components/FormComponents/FormikControl";
 
 import {JudgesSchema} from "@/app/(site)/judges/components/JudgesForm/judgeFormSchema";
-import {Button} from "@/components/ui/Button";
-import ImageUpload from "@/components/FormComponents/ImageUpload";
+
 
 
 const genderOptions = [
@@ -32,7 +31,7 @@ interface FormikProps<Values extends Record<string, any>> {
     setFieldValue: (name: string, value: any, shouldValidate?: boolean) => void;
     // ... other props or functions you use
 }
-const Page1 = ({ formik })=> {
+const Page1 = ()=> {
     const { errors } = useFormikContext<InferType<typeof JudgesSchema>>();
 
 

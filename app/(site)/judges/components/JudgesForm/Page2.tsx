@@ -6,9 +6,8 @@ import { useFormikContext } from "formik";
 
 import { InferType } from "yup";
 import FormikControl from "@/components/FormComponents/FormikControl";
-import {FormStepComponentType} from "@/components/JudgesForm/FormStepProps";
-import {JudgesSchema} from "@/components/JudgesForm/judgeFormSchema";
-import {Button} from "@/components/ui/Button";
+
+import {JudgesSchema} from "@/app/(site)/judges/components/JudgesForm/judgeFormSchema";
 
 const educationOptions = [
     { key: "Primary School", value: "Primary School" },

@@ -96,6 +96,7 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
     const onSubmit = async (
         values: FormValues,
+        onClose: () => void,
         { setSubmitting, resetForm }: { setSubmitting: (isSubmitting: boolean) => void; resetForm: () => void }
     ) => {
 
@@ -171,8 +172,16 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     </div>
                     <Formik
                         initialValues={initialValues}
-                        onSubmit={onSubmit}
-                        // validationSchema={JudgesSchema}
+                        //validationSchema={JudgesSchema} // Add validation schema
+                        onSubmit={(values, actions) => {
+
+                            if (step === 4) {
+                                onSubmit(values, onClose)
+                            } else {
+                                nextStep();
+                            }
+                        }
+                        }
                     >
                         {({ isSubmitting, isValid, dirty }) => (
                             <Form
@@ -187,7 +196,7 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                                                 className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">Previous</button>
                                     )}
                                     <button type="submit" disabled={!isValid || !dirty}
-                                        // onClick={nextStep}
+                                       onClick={nextStep}
                                             className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">{step === 4 ? 'Submit' : 'Next'}</button>
                                 </div>
                             </Form>
