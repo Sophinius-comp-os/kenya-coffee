@@ -19,8 +19,7 @@ interface FormValues {
     phone: string;
     gender: string;
     idNumber:number;
-    // frontIdImage: File | null;
-    // backIdImage: File | null;
+
     highestEducationLevel: string;
     currentEmployer: string;
     numberOfYearsWorked: number;
@@ -32,6 +31,8 @@ interface FormValues {
     judgedBefore: boolean;
     eventJudged: string;
 
+    // frontIdImage: File | null;
+    // backIdImage: File | null;
 }
 
 const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -96,8 +97,8 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
     const onSubmit = async (
         values: FormValues,
-        onClose: () => void,
-        { setSubmitting, resetForm }: { setSubmitting: (isSubmitting: boolean) => void; resetForm: () => void }
+         onClose: () => void,
+         { setSubmitting, resetForm }: { setSubmitting: (isSubmitting: boolean) => void; resetForm: () => void }
     ) => {
 
         try {
@@ -124,7 +125,7 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             formData.append('idNumber', values.idNumber);
             formData.append('highestEducationLevel', values.highestEducationLevel);
             formData.append('currentEmployer', values.currentEmployer);
-                formData.append('numberOfYearsWorked', values.numberOfYearsWorked),
+                formData.append('numberOfYearsWorked', values.numberOfYearsWorked);
                 formData.append('nameOfReferee', values.nameOfReferee);
             formData.append('emailOfReferee', values.emailOfReferee);
             formData.append('phoneOfReferee', values.phoneOfReferee);
@@ -172,16 +173,10 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     </div>
                     <Formik
                         initialValues={initialValues}
-                        //validationSchema={JudgesSchema} // Add validation schema
-                        onSubmit={(values, actions) => {
+                        validationSchema={JudgesSchema} // Add validation schema
+                        onSubmit={onSubmit}
+                        validate // Add validate prop to trigger validation on step change
 
-                            if (step === 4) {
-                                onSubmit(values, onClose)
-                            } else {
-                                nextStep();
-                            }
-                        }
-                        }
                     >
                         {({ isSubmitting, isValid, dirty }) => (
                             <Form
@@ -195,8 +190,8 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                                         <button type="button" onClick={prevStep}
                                                 className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">Previous</button>
                                     )}
-                                    <button type="submit" disabled={!isValid || !dirty}
-                                       onClick={nextStep}
+                                    <button type="submit" disabled={!isValid }
+                                            onClick={() => setStep(step + 1)} // Handle navigation directly
                                             className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">{step === 4 ? 'Submit' : 'Next'}</button>
                                 </div>
                             </Form>
@@ -209,3 +204,37 @@ const MultiStepForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 };
 
 export default MultiStepForm;
+
+//
+//
+// const isLastStep = currentStep === Object.keys(steps).length;
+//
+// const handleNext = () => {
+//     if (!formik.errors.length) { // Check for validation errors
+//         setCurrentStep(currentStep + 1);
+//     }
+// };
+//
+// const handleBack = () => {
+//     setCurrentStep(currentStep - 1);
+// };
+//
+// const steps = {
+//     1: Step1,
+//     2: Step2,
+//     // ... other steps
+// };
+//
+// const RenderStepContent = steps[currentStep];
+//
+// return (
+//     <form onSubmit={formik.handleSubmit}>
+//         <RenderStepContent />
+//         {currentStep > 1 && <button type="button" onClick={handleBack}>Back</button>}
+//         {!isLastStep && <button type="button" onClick={handleNext}>Next</button>}
+//         {isLastStep && <button type="submit">Submit</button>}
+//     </form>
+// );
+// };
+//
+// export default MultistepForm;

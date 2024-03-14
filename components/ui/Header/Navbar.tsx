@@ -208,7 +208,7 @@ const Navbar = () => {
         <nav className="relative z-50 flex w-full items-center justify-between">
           <div className="flex shrink-0 items-center">
             <Link
-              href="/public"
+              href="/"
               aria-label="Home"
               className="flex flex-shrink-0 items-center"
             >

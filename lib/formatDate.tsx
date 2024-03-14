@@ -5,5 +5,6 @@ export const formatDate = (datetime) => {
     day: "numeric",
   });
   const date = new Date(datetime);
+
   return longEnUSFormatter.format(date);
 };

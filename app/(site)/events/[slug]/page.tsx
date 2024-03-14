@@ -47,7 +47,7 @@ export default async function BlogPost({
 }) {
   const events: [Post] = await fetchEvents();
   const event = events.find((event) => event.slug.current === params.slug);
-
+console.log(event?.publishedAt)
   return (
     <>
       <main>
@@ -87,6 +87,7 @@ export default async function BlogPost({
                   </svg>
                   <time dateTime={event?.publishedAt} className='text-2xl'>
                     {format(parseISO(event?.publishedAt), "LLL d, yyyy")}
+
                   </time>
                 </span>
                 <span className="flex items-center gap-2">

@@ -97,10 +97,37 @@ export async function POST(
         const body = await req.json();
         console.log(body)
 
-        const { name, email, phone, gender }  = body;
+        const {
+            name,
+            email,
+            phone,
+            gender,
+            idNumber,
+            highestEducationLevel,
+            currentEmployer,
+            numberOfYearsWorked,
+            nameOfReferee,
+            emailOfReferee,
+            phoneOfReferee,
+            placeOfWork,
+            judgingCategory,
+            judgedBefore,
+            eventJudged,}  = body;
+
+
+
+
 
         // Validate required fields
-            if (!name || !email || !phone || !gender) {
+            if (!name || !email || !phone || !gender|| !idNumber! || highestEducationLevel! || currentEmployer! ||
+                numberOfYearsWorked! ||
+                nameOfReferee! ||
+                emailOfReferee! ||
+                phoneOfReferee! ||
+                placeOfWork! ||
+                judgingCategory! ||
+                judgedBefore! ||
+                eventJudged! ||) {
                 return new NextResponse( 'Required fields missing: name, email, phone, gender' ,
                     { status: 400 });
             }
@@ -112,6 +139,17 @@ export async function POST(
                     email,
                     phone,
                     gender,
+                    idNumber,
+                    highestEducationLevel,
+                    currentEmployer,
+                    numberOfYearsWorked,
+                    nameOfReferee,
+                    emailOfReferee,
+                    phoneOfReferee,
+                    placeOfWork,
+                    judgingCategory,
+                    judgedBefore,
+                    eventJudged,
                 },
             });
 

@@ -1,8 +1,14 @@
 import React from "react";
 import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
-const TextArea = (props) => {
-  const { label, name, ...rest } = props;
+
+interface TextAreaProps {
+    children:React.ReactNode,
+    label:string,
+    name:string,
+}
+const TextArea = ({label, name, ...rest}:TextAreaProps) => {
+
   return (
     <>
       <label className="block text-black text-lg font-bold mb-1" htmlFor={name}>
