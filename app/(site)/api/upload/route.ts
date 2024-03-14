@@ -127,7 +127,7 @@ export async function POST(
                 placeOfWork! ||
                 judgingCategory! ||
                 judgedBefore! ||
-                eventJudged! ||) {
+                eventJudged! ) {
                 return new NextResponse( 'Required fields missing: name, email, phone, gender' ,
                     { status: 400 });
             }
@@ -163,3 +163,4 @@ export async function POST(
     }
 
 }
+
