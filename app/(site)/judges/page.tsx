@@ -9,6 +9,7 @@ import Image from "next/image";
 import {useTheme} from "next-themes";
 
 import Modal from "@/app/(site)/judges/components/JudgesForm/Modal";
+import Link from "next/link";
 
 
 
@@ -83,91 +84,92 @@ const Judges = () => {
                 >
                     <Container className="">
                         <div className="flex flex-wrap -mx-4 lg:justify-between">
-                            <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
-                                <div className="mb-12 max-w-[570px] lg:mb-0">
+                            <div className="w-full  items-center justify-center">
+
                                     <h2
                                         className={clsx(
-                                            "mb-6 text-xl md:text-2xl  font-bold uppercase text-white "
+                                            "mb-6 text-xl md:text-2xl text-center  font-bold uppercase text-white "
                                             // theme === "dark" ? " text-white" : " text-[#041434]"
                                         )}
                                     >
-                                        List of Judges </h2>
-                                    <p className="text-base leading-relaxed mb-9 text-body-color">
-                                        Here is a list of Judges that Judge in our Various Events.
+                                        Judges Form
+                                       </h2>
+                                    <p className="text-base text-center leading-relaxed mb-9 text-body-color">
+                                        Sign up to be a judge at our one of our events
                                     </p>
-                                    <div className="mb-8 flex w-full max-w-[370px]">
-                                        <div
-                                            className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
-                                            <FaBuilding style={fontStyles}/>
-
-                                        </div>
-                                        <div className="w-full">
-                                            <h4
-                                                className={clsx(
-                                                    "mb-1 text-lg md:text-xl  font-bold"
-                                                    // theme === "dark" ? " text-white" : " text-[#041434]"
-                                                )}
-                                            >
-                                                Our Location
-                                            </h4>
-                                            <p className="text-base text-body-color">Nairobi cbd</p>
-                                        </div>
-                                    </div>
-                                    <div className="mb-8 flex w-full max-w-[370px]">
-                                        <div
-                                            className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
-
-
-                                            <FaPhoneAlt style={fontStyles}/>
-                                        </div>
-                                        <div className="w-full">
-                                            <h4
-                                                className={clsx(
-                                                    "mb-1 text-lg md:text-xl font-bold"
-                                                    // theme === "dark" ? " text-white" : " text-[#041434]"
-                                                )}
-                                            >
-                                                Phone Number
-                                            </h4>
-                                            <p className="text-base text-body-color">+254700000</p>
-                                        </div>
-                                    </div>
-                                    <div className="mb-8 flex w-full max-w-[370px]">
-                                        <div
-                                            className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
-
-
-                                            <MdEmail style={fontStyles}/>
-                                        </div>
-                                        <div className="w-full">
-                                            <h4
-                                                className={clsx(
-                                                    "mb-1 text-lg md:text-xl font-bold"
-                                                    // theme === "dark" ? " text-white" : " text-[#041434]"
-                                                )}
-                                            >
-                                                Email Address
-                                            </h4>
-                                            <p className="text-base text-body-color">
-                                                info@kenyacoffeeEvents.com
-                                            </p>
-                                        </div>
-                                    </div>
+                                    {/*<div className="mb-8 flex w-full max-w-[370px]">*/}
+                                    {/*    <div*/}
+                                    {/*        className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">*/}
+                                    {/*        <FaBuilding style={fontStyles}/>*/}
+                                    
+                                    {/*    </div>*/}
+                                    {/*    <div className="w-full">*/}
+                                    {/*        <h4*/}
+                                    {/*            className={clsx(*/}
+                                    {/*                "mb-1 text-lg md:text-xl  font-bold"*/}
+                                    {/*                // theme === "dark" ? " text-white" : " text-[#041434]"*/}
+                                    {/*            )}*/}
+                                    {/*        >*/}
+                                    {/*            Our Location*/}
+                                    {/*        </h4>*/}
+                                    {/*        <p className="text-base text-body-color">Nairobi cbd</p>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="mb-8 flex w-full max-w-[370px]">*/}
+                                    {/*    <div*/}
+                                    {/*        className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">*/}
+                                    
+                                    
+                                    {/*        <FaPhoneAlt style={fontStyles}/>*/}
+                                    {/*    </div>*/}
+                                    {/*    <div className="w-full">*/}
+                                    {/*        <h4*/}
+                                    {/*            className={clsx(*/}
+                                    {/*                "mb-1 text-lg md:text-xl font-bold"*/}
+                                    {/*                // theme === "dark" ? " text-white" : " text-[#041434]"*/}
+                                    {/*            )}*/}
+                                    {/*        >*/}
+                                    {/*            Phone Number*/}
+                                    {/*        </h4>*/}
+                                    {/*        <p className="text-base text-body-color">+254700000</p>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="mb-8 flex w-full max-w-[370px]">*/}
+                                    {/*    <div*/}
+                                    {/*        className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">*/}
+                                    
+                                    
+                                    {/*        <MdEmail style={fontStyles}/>*/}
+                                    {/*    </div>*/}
+                                    {/*    <div className="w-full">*/}
+                                    {/*        <h4*/}
+                                    {/*            className={clsx(*/}
+                                    {/*                "mb-1 text-lg md:text-xl font-bold"*/}
+                                    {/*                // theme === "dark" ? " text-white" : " text-[#041434]"*/}
+                                    {/*            )}*/}
+                                    {/*        >*/}
+                                    {/*            Email Address*/}
+                                    {/*        </h4>*/}
+                                    {/*        <p className="text-base text-body-color">*/}
+                                    {/*            info@kenyacoffeeEvents.com*/}
+                                    {/*        </p>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
                                 </div>
-                            </div>
 
 
 
 
 
-<div className='flex items-center'>
+
+<div className='flex items-center justify-center w-full'>
 
 
-                            <button onClick={openModal}
+                            <Link href='https://forms.gle/z4VvuB829uSsUap39'  rel="noopener noreferrer" target="_blank"
                                     className="inline sm:w-auto rounded bg-[#2ecc71] my-2 px-4 py-2 text-lg sm:px-8 sm:py-3 md:text-xl font-medium shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500">
                             Click To Register
-                            </button>
-                            <Modal isOpen={isModalOpen} onClose={closeModal}/>
+                            </Link>
+                            {/*<Modal isOpen={isModalOpen} onClose={closeModal}/>*/}
 </div>
                         </div>
                     </Container>
