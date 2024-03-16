@@ -21,7 +21,7 @@ const myIcon = new L.Icon({
 const Map = () => {
   return (
     <MapContainer
-      center={[1.2921, 36.8219]}
+      center={[ -1.2892015802522712, 36.82965055595972]}
       zoom={12}
       scrollWheelZoom={false}
       style={{ height: 600, width: "100%" }}
@@ -31,9 +31,9 @@ const Map = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
 
-      <Marker position={[1.2921, 36.8219]} icon={myIcon}>
+      <Marker position={[ -1.2892015802522712, 36.82965055595972]} icon={myIcon}>
         <Popup>
-          <h1>Villa Jahawi</h1>
+          <h1>Kenya Coffee Events</h1>
         </Popup>
       </Marker>
     </MapContainer>
