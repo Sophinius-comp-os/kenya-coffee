@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Kenya Coffee Events Official Website Built using Nextjs 14 and Sanity cms
 
-## Getting Started
 
-First, run the development server:
+### Screenshot
+<img src="./kenya-coffee.png">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+## Table of contents
+
+- [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+- [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+
+
+## Overview
+    This is a site for the Kenya Coffee website Built Using Nextjs and sanity cms
+
+### The challenge
+
+Users should be able to:
+
+- Create, update and delete Posts!
+- Create, update and delete Events!
+
+### Links
+
+- Solution URL: [Github](https://github.com/mcwachira/kenya-coffee)
+- Live Site URL: [Live](https://www.kenyacoffeeevents.org/)
+
+
+
+Key Features:
+
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/mcwachira/ecommerce-store.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setup .env file
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+```js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Start the app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```shell
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Available commands
+
+Running commands with npm `npm run [command]`
+
+| 
+
+
+### Built with
+
+- Nextjs 13
+- Tailwind css
+- SanityCms
+- 
+-
+- Mobile-first workflow
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind css](https://tailwindcss.com/)- For styling
+- [Sanity cms](https://www.sanity.io/) - For Components
+
+
+
+### What I learned
+
+- Learnt How to build a Static site from the ground app to production
+- Learnt How to use Nextjs 13 App router to build the App
+- Learnt How to use Snity cms to build the blog part of the website
+
+
+## Author
+
+- Website - [Add your name here](https://mcwachira.com)
+- Twitter - [@mc_wachira](https:https://twitter.com/mc_wachira)
+
+
+
