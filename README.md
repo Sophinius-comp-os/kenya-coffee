@@ -47,7 +47,7 @@ Key Features:
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/mcwachira/ecommerce-store.git
+git clone https://github.com/mcwachira/kenya-coffee.git
 ```
 
 ### Install packages
